@@ -1,0 +1,433 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John Pantelopoulos Reviews</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Independent advertising reviews for UK aesthetic clinics: your website, Google listing and Instagram checked against the rules on prescription-only medicines. £295, fixed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Montserrat:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: matched to the client's mockup. Navy and white, serif headlines, small tracked eyebrows, photo-backed hero and dark bands, line icons in circles, a numbered timeline, and a form on a dark photo band. */
+:root {
+  --bg: #ffffff;
+  --soft-bg: #f5f7f9;
+  --text: #4f5b67;
+  --head: #0d2238;
+  --navy: #0d2238;
+  --navy-2: #13304f;
+  --muted: #7b8794;
+  --line: #e1e6eb;
+  --icon-bg: #f3f5f8;
+  --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1520; --soft-bg: #0f1c29; --text: #b3bfcb; --head: #eef2f6; --navy: #0d2238; --navy-2: #13304f;
+    --muted: #8a98a6; --line: #22313f; --icon-bg: #142536; --card: #102031;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1520; --soft-bg: #0f1c29; --text: #b3bfcb; --head: #eef2f6; --navy: #0d2238; --navy-2: #13304f;
+  --muted: #8a98a6; --line: #22313f; --icon-bg: #142536; --card: #102031;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 1rem/1.7 "Source Sans 3", "Segoe UI", sans-serif; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #8fb3d9; outline-offset: 3px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 16px; }
+h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; color: var(--head); margin: 0; letter-spacing: -.005em; }
+h1 { font-size: clamp(2.2rem, 4.6vw, 3.3rem); line-height: 1.12; font-weight: 700; letter-spacing: -.015em; }
+h2 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); line-height: 1.18; }
+h3 { font-size: 1.12rem; font-weight: 600; line-height: 1.35; }
+.eyebrow { font-family: "Montserrat", sans-serif; font-weight: 600; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin: 0 0 1rem; }
+.btn { display: inline-flex; align-items: center; gap: .7rem; font-family: "Montserrat", sans-serif; font-weight: 500; font-size: .82rem; text-decoration: none; padding: .85rem 1.3rem; border: 1px solid var(--navy); background: var(--navy); color: #fff; cursor: pointer; }
+.btn:hover { background: var(--navy-2); }
+.btn.light { background: #fff; color: var(--navy); border-color: #fff; }
+.btn.light:hover { background: #e9eef3; }
+.chev { width: 7px; height: 11px; flex: none; }
+
+/* Header */
+.top { background: var(--bg); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 76px; }
+.brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; }
+.brand img { width: 44px; }
+.brand span { font-family: "Montserrat", sans-serif; font-weight: 600; font-size: .86rem; letter-spacing: .14em; text-transform: uppercase; color: var(--head); }
+.links { display: flex; align-items: center; gap: 2rem; font-family: "Montserrat", sans-serif; font-size: .8rem; font-weight: 500; }
+.links a { text-decoration: none; color: var(--head); }
+.links a:not(.btn):hover { color: var(--muted); }
+.links .btn { color: #fff; }
+@media (max-width: 900px) { .links a:not(.btn) { display: none; } .brand span { font-size: .72rem; letter-spacing: .1em; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand img { filter: brightness(0) invert(.92); } }
+:root[data-theme="dark"] .brand img { filter: brightness(0) invert(.92); }
+
+/* Hero */
+.hero { position: relative; min-height: 560px; display: flex; align-items: center; background: #dfe5ea url("img/p5499551.jpg") center right / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(246,248,250,.97) 0%, rgba(246,248,250,.9) 38%, rgba(246,248,250,.35) 70%, rgba(246,248,250,0) 100%); }
+.hero .wrap { position: relative; width: 100%; padding-top: 4rem; padding-bottom: 4rem; }
+.hero .copy { max-width: 540px; }
+.hero h1 { color: #0d2238; }
+.hero .eyebrow { color: #5d6b78; }
+.hero p.lead { color: #3f4c58; margin: 1.4rem 0 2rem; max-width: 30rem; font-size: 1.05rem; }
+@media (max-width: 700px) { .hero { min-height: 0; } .hero::before { background: rgba(246,248,250,.9); } }
+
+/* What I do */
+.what { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+.what .wrap { display: grid; grid-template-columns: 1.1fr 2fr; gap: 3rem; align-items: start; }
+.what .intro p { margin: 1.2rem 0 0; }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); }
+.pillars > div { padding: 0 1.8rem; border-left: 1px solid var(--line); }
+.pillars svg { width: 30px; height: 30px; color: var(--head); margin-bottom: 1.2rem; }
+.pillars h3 { font-size: 1rem; margin-bottom: .5rem; }
+.pillars p { margin: 0; font-size: .92rem; }
+@media (max-width: 900px) { .what .wrap { grid-template-columns: 1fr; } .pillars { grid-template-columns: 1fr; gap: 1.8rem; } .pillars > div { padding: 0 0 0 1.2rem; } }
+
+/* Dark services band */
+.services { position: relative; background: #0d2238 url("img/p8171870.jpg") center / cover no-repeat; color: #c9d3dd; }
+.services::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,34,56,.96) 0%, rgba(13,34,56,.9) 50%, rgba(13,34,56,.82) 100%); }
+.services .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-top: clamp(3.5rem, 7vw, 5rem); padding-bottom: clamp(3.5rem, 7vw, 5rem); }
+.services h2 { color: #fff; }
+.services .eyebrow { color: #9fb0c1; }
+.services p { margin: 1.2rem 0 1.8rem; max-width: 28rem; }
+.svc { list-style: none; margin: 0; padding: 0 0 0 2.5rem; border-left: 1px solid rgba(255,255,255,.18); }
+.svc li { border-bottom: 1px solid rgba(255,255,255,.16); }
+.svc li:last-child { border-bottom: 0; }
+.svc a { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; text-decoration: none; padding: 1.1rem 0; }
+.svc b { display: block; font-family: "Source Serif 4", serif; font-weight: 500; color: #fff; font-size: 1.02rem; }
+.svc span { font-size: .88rem; color: #a9b7c5; }
+.svc .chev { color: #fff; }
+.svc a:hover b { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) { .services .wrap { grid-template-columns: 1fr; gap: 2rem; } .svc { padding-left: 0; border-left: 0; } }
+
+/* Sample report entry */
+.sample { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+.sample .wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3.5rem; align-items: start; }
+.sample .intro p { margin: 1.2rem 0 0; }
+.entry { background: var(--card); border: 1px solid var(--line); box-shadow: 0 20px 40px -30px rgba(13,34,56,.4); }
+.entry header { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 1.4rem; border-bottom: 1px solid var(--line); font-family: "Montserrat", sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
+.entry header .lvl { color: #a3362b; }
+.entry dl { margin: 0; padding: 1.2rem 1.4rem 1.4rem; display: grid; grid-template-columns: 7rem 1fr; gap: .9rem 1.2rem; }
+.entry dt { font-family: "Montserrat", sans-serif; font-size: .74rem; font-weight: 600; color: var(--head); padding-top: .2rem; }
+.entry dd { margin: 0; font-size: .95rem; }
+.entry .q { font-family: "Source Serif 4", serif; font-size: 1.05rem; color: var(--head); }
+.entry mark { background: #dfe7f0; color: #0d2238; padding: 0 .2em; box-shadow: inset 0 -2px 0 #6f8aa6; }
+.entry footer { padding: .9rem 1.4rem; background: var(--soft-bg); font-size: .85rem; color: var(--muted); border-top: 1px solid var(--line); }
+@media (max-width: 900px) { .sample .wrap { grid-template-columns: 1fr; gap: 2rem; } }
+@media (max-width: 520px) { .entry dl { grid-template-columns: 1fr; gap: .1rem; } .entry dd { margin-bottom: .7rem; } }
+
+/* Process timeline */
+.process { background: var(--soft-bg); padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+.process .head { max-width: 560px; margin-bottom: 3rem; }
+.process .head p { margin: 1rem 0 0; }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; position: relative; }
+.timeline::before { content: ""; position: absolute; top: 15px; left: 15px; right: 15px; height: 1px; background: var(--line); }
+.timeline li { position: relative; }
+.timeline .dot { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; background: var(--navy); color: #fff; font-family: "Montserrat", sans-serif; font-size: .78rem; font-weight: 600; margin-bottom: 1.2rem; position: relative; }
+.timeline h3 { font-size: 1rem; margin-bottom: .4rem; }
+.timeline p { margin: 0; font-size: .9rem; }
+.strip { margin-top: 3.5rem; background: var(--card); border: 1px solid var(--line); display: flex; align-items: center; gap: 1.5rem; padding: 1.4rem 1.6rem; }
+.strip .ic { width: 52px; height: 52px; flex: none; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--head); }
+.strip .ic svg { width: 24px; height: 24px; }
+.strip div.t { flex: 1; }
+.strip h3 { font-size: 1.05rem; }
+.strip p { margin: .2rem 0 0; font-size: .9rem; }
+@media (max-width: 900px) { .timeline { grid-template-columns: 1fr; gap: 1.6rem; } .timeline::before { top: 15px; bottom: 15px; left: 15px; right: auto; width: 1px; height: auto; } .timeline li { padding-left: 3.2rem; } .timeline .dot { position: absolute; left: 0; top: 0; } .strip { flex-wrap: wrap; } }
+
+/* Price, with photo */
+.price { position: relative; background: #eef1f4 url("img/p7735699.jpg") center right / cover no-repeat; }
+.price::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(245,247,249,.98) 0%, rgba(245,247,249,.94) 45%, rgba(245,247,249,.25) 100%); }
+.price .wrap { position: relative; padding-top: clamp(3.5rem, 7vw, 5.5rem); padding-bottom: clamp(3.5rem, 7vw, 5.5rem); }
+.price .copy { max-width: 520px; }
+.price h2 { color: #0d2238; }
+.price .eyebrow { color: #5d6b78; }
+.price .amount { font-family: "Source Serif 4", serif; font-size: 3.2rem; color: #0d2238; line-height: 1; margin: 1.4rem 0 .3rem; }
+.price .amount small { font-family: "Source Sans 3", sans-serif; font-size: 1rem; color: #4f5b67; margin-left: .5rem; }
+.price ul { margin: 1.2rem 0 2rem; padding: 0; list-style: none; color: #3f4c58; }
+.price li { padding: .45rem 0 .45rem 1.6rem; position: relative; border-bottom: 1px solid #dde3e9; }
+.price li::before { content: ""; position: absolute; left: 0; top: 1.05rem; width: 9px; height: 5px; border-left: 1.5px solid #0d2238; border-bottom: 1.5px solid #0d2238; transform: rotate(-45deg); }
+.price .fine { font-size: .85rem; color: #5d6b78; margin: 1rem 0 0; }
+@media (max-width: 700px) { .price::before { background: rgba(245,247,249,.94); } }
+
+/* Why */
+.why { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+.why .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.why .intro p { margin: 1.2rem 0 0; }
+.me { display: flex; align-items: center; gap: 1.1rem; margin-top: 2rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+.me img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; object-position: 50% 15%; }
+.me b { display: block; color: var(--head); font-family: "Source Serif 4", serif; font-weight: 500; font-size: 1.05rem; }
+.me span { font-size: .9rem; }
+.reasons { list-style: none; margin: 0; padding: 0; }
+.reasons li { display: grid; grid-template-columns: 52px 1fr; gap: 1.2rem; padding: 0 0 1.8rem; }
+.reasons .ic { width: 52px; height: 52px; border-radius: 50%; background: var(--icon-bg); border: 1px solid var(--line); display: grid; place-items: center; color: var(--head); }
+.reasons .ic svg { width: 22px; height: 22px; }
+.reasons h3 { font-size: 1rem; margin: .2rem 0 .3rem; }
+.reasons p { margin: 0; font-size: .92rem; }
+.faq { margin-top: .6rem; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; padding: 1rem 0; font-family: "Source Serif 4", serif; font-weight: 500; color: var(--head); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: "Montserrat", sans-serif; color: var(--muted); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 0 0 1rem; font-size: .95rem; }
+@media (max-width: 900px) { .why .wrap { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+/* Contact */
+.contact { position: relative; background: #0d2238 url("img/p207675.jpg") center / cover no-repeat; color: #c9d3dd; }
+.contact::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,26,44,.95) 0%, rgba(10,26,44,.88) 55%, rgba(10,26,44,.8) 100%); }
+.contact .wrap { position: relative; display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; padding-top: clamp(3.5rem, 7vw, 5.5rem); padding-bottom: clamp(3.5rem, 7vw, 5.5rem); }
+.contact h2 { color: #fff; }
+.contact .eyebrow { color: #9fb0c1; }
+.contact .intro p { margin: 1.2rem 0 0; max-width: 26rem; }
+.contact .intro a { color: #fff; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+form .full { grid-column: 1 / -1; }
+label { display: block; }
+label span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+input, select, textarea { width: 100%; font: inherit; font-size: .92rem; color: #fff; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.3); padding: .8rem .9rem; border-radius: 0; }
+input::placeholder, textarea::placeholder { color: #a9b7c5; }
+select { appearance: none; color: #d6dee6; background-image: linear-gradient(45deg, transparent 50%, #c9d3dd 50%), linear-gradient(135deg, #c9d3dd 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
+select option { color: #0d2238; }
+textarea { min-height: 130px; resize: vertical; }
+form .note { grid-column: 1 / -1; font-size: .82rem; color: #a9b7c5; margin: 0; }
+@media (max-width: 900px) { .contact .wrap { grid-template-columns: 1fr; gap: 2.5rem; } }
+@media (max-width: 520px) { form { grid-template-columns: 1fr; } }
+
+/* Footer */
+.foot { background: var(--bg); border-top: 1px solid var(--line); }
+.foot .row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-top: 1.6rem; padding-bottom: 1.6rem; }
+.foot .links { gap: 1.6rem; font-size: .76rem; }
+.foot .tag { font-family: "Source Serif 4", serif; font-size: .9rem; color: var(--muted); text-align: right; }
+.legal { border-top: 1px solid var(--line); padding: 1.2rem 0 2rem; font-size: .82rem; color: var(--muted); }
+.legal summary { cursor: pointer; color: var(--head); margin-top: .6rem; }
+.legal h3 { font-size: .92rem; margin: 1rem 0 .2rem; }
+.legal p { margin: .3rem 0; max-width: 760px; }
+@media (max-width: 900px) { .foot .links { display: none; } .foot .tag { text-align: left; } }
+</style>
+</head><body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="chev" viewBox="0 0 7 11"><path d="M1 1l4.5 4.5L1 10" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="img/jp-mark.png" alt="" width="200" height="169"><span>John Pantelopoulos</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#process">Our process</a>
+      <a href="#why">Why me</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <p class="eyebrow">Advertising reviews for UK aesthetic clinics</p>
+        <h1>Keep your clinic's marketing within the medicine rules.</h1>
+        <p class="lead">I review your website, Google listing and Instagram for references to prescription-only medicines, and give you replacement wording for each one, before they become a problem.</p>
+        <a class="btn" href="#contact">Book a review <svg class="chev"><use href="#chev"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="what">
+    <div class="wrap">
+      <div class="intro">
+        <p class="eyebrow">What I do</p>
+        <h2>Independent reviews.<br>Clear answers.</h2>
+        <p>The ASA's guidance on prescription-only medicines reaches further than most clinics expect: page titles, price lists, the description Google shows, hashtags, even the word "relaxing". I find each reference and show you how to reword it.</p>
+      </div>
+      <div class="pillars">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+          <h3>Find every reference</h3>
+          <p>Every page, listing and post where a prescription medicine is named or implied.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 15.5h7M9 9h3"/></svg>
+          <h3>Show the guidance</h3>
+          <p>Each entry is linked to the published ASA, CAP or MHRA guidance it relates to.</p>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></svg>
+          <h3>Give you new wording</h3>
+          <p>Replacement text for each entry, ready to paste into your site or posts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Services</p>
+        <h2>Clinic advertising<br>review</h2>
+        <p>One review covers everything a patient can see before they book. Each report is practical, specific to your clinic, and written and checked by me.</p>
+        <a class="btn light" href="#sample">See a sample entry <svg class="chev"><use href="#chev"/></svg></a>
+      </div>
+      <ul class="svc">
+        <li><a href="#sample"><div><b>Website pages</b><span>Treatment pages, menus, price lists, blog posts and testimonials.</span></div><svg class="chev"><use href="#chev"/></svg></a></li>
+        <li><a href="#sample"><div><b>Google search descriptions</b><span>The titles and text Google shows under each of your pages.</span></div><svg class="chev"><use href="#chev"/></svg></a></li>
+        <li><a href="#sample"><div><b>Google Business Profile</b><span>Your services list, posts, and questions and answers.</span></div><svg class="chev"><use href="#chev"/></svg></a></li>
+        <li><a href="#sample"><div><b>Instagram</b><span>Posts, captions and hashtags from the past twelve months.</span></div><svg class="chev"><use href="#chev"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sample" id="sample">
+    <div class="wrap">
+      <div class="intro">
+        <p class="eyebrow">From a real report</p>
+        <h2>What an entry looks like</h2>
+        <p>This is one of 22 entries from a review of a nurse-led clinic in South West England, October 2026. The town is removed. Every entry in a report follows the same layout, with the most visible ones first.</p>
+      </div>
+      <article class="entry" aria-label="Sample report entry">
+        <header><span>Entry H2</span><span class="lvl">High visibility</span></header>
+        <dl>
+          <dt>Wording</dt><dd class="q">"Aesthetic treatment prices in [town]. <mark>Botox from £185</mark>, lip fillers from £285…"</dd>
+          <dt>Where</dt><dd>The description Google shows under the clinic's price list page. People see it before they click.</dd>
+          <dt>Guidance</dt><dd>CAP Code rule 12.12, and the ASA's enforcement notice of January 2020: a product name next to a price is read as an advert for that product.</dd>
+          <dt>Suggested</dt><dd>"Aesthetic treatment prices in [town]. Lip fillers from £285, microneedling from £195, Profhilo from £350. No hidden costs."</dd>
+        </dl>
+        <footer>Each entry links to the guidance it cites.</footer>
+      </article>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Our process</p>
+        <h2>How a review works</h2>
+        <p>Everything happens by email. You don't need to share any passwords; I only look at what is public.</p>
+      </div>
+      <ol class="timeline">
+        <li><span class="dot">1</span><h3>Get in touch</h3><p>Send your website, Google listing name and Instagram handle.</p></li>
+        <li><span class="dot">2</span><h3>Terms and invoice</h3><p>I send one page of terms and a fixed invoice for £295.</p></li>
+        <li><span class="dot">3</span><h3>The review</h3><p>I go through every page, listing and post, and check each entry against the live version.</p></li>
+        <li><span class="dot">4</span><h3>Your report</h3><p>A PDF within five working days of payment, most visible items first.</p></li>
+        <li><span class="dot">5</span><h3>Follow-up questions</h3><p>Ask me anything about the report by email.</p></li>
+      </ol>
+      <div class="strip">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+        <div class="t"><h3>A clear process and a fixed price.</h3><p>No subscription, no ongoing fees and no sales calls.</p></div>
+        <a class="btn" href="#contact">Get in touch <svg class="chev"><use href="#chev"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="price">
+    <div class="wrap">
+      <div class="copy">
+        <p class="eyebrow">Price</p>
+        <h2>One review, one fixed price</h2>
+        <p class="amount">£295<small>one-off</small></p>
+        <ul>
+          <li>Website, Google listing and Instagram reviewed</li>
+          <li>Exact wording, location and guidance for every entry</li>
+          <li>Replacement wording you can paste in</li>
+          <li>Follow-up questions answered by email</li>
+        </ul>
+        <a class="btn" href="#contact">Book a review <svg class="chev"><use href="#chev"/></svg></a>
+        <p class="fine">No VAT is charged to UK businesses; the reverse charge applies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="intro">
+        <p class="eyebrow">Why choose me</p>
+        <h2>Why work with me?</h2>
+        <p>I review aesthetic clinic advertising and nothing else. I started after reading through hundreds of clinic websites and seeing the same few issues again and again: the homepage, the Google description and the price list.</p>
+        <div class="me">
+          <img src="img/john.jpg" alt="John Pantelopoulos" width="600" height="660" loading="lazy">
+          <div><b>John Pantelopoulos</b><span>Sole trader, working by email with clinics in England and Wales</span></div>
+        </div>
+        <div class="faq">
+          <details><summary>Is this legal advice?</summary><p>No. Each entry shows the published guidance it relates to, with a link, and you decide what to change. A solicitor can use the report as a starting point.</p></details>
+          <details><summary>Will changing the wording affect my Google rankings?</summary><p>It can. Taking product names out may reduce search traffic for those names, and I can't promise any ranking outcome. The suggested wording focuses on what patients look for, like lines and wrinkles.</p></details>
+          <details><summary>Will you report my clinic to anyone?</summary><p>No. I have no connection to the ASA, CAP or the MHRA, and I don't share what I find with anyone.</p></details>
+        </div>
+      </div>
+      <ul class="reasons">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></span><div><h3>Independent and confidential</h3><p>No connection to the ASA, CAP or the MHRA. Your report is for your clinic only.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><div><h3>Built for aesthetic clinics</h3><p>Every check is written around how clinics actually advertise: treatment pages, price lists and Instagram.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 15.5h5"/></svg></span><div><h3>Clear, practical reporting</h3><p>Exact wording, where it is, the guidance, and replacement text. Nothing vague.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 6h16v10H8l-4 3z"/><path d="M8 10h8M8 13h5"/></svg></span><div><h3>Straightforward to deal with</h3><p>One fixed price, everything by email, and questions answered by the person who wrote your report.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="intro">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's talk about a review for your clinic.</h2>
+        <p>Send me a note and I'll reply by email. Or write to me directly at <a href="mailto:john@jpaudits.co.uk">john@jpaudits.co.uk</a>.</p>
+      </div>
+      <form id="enquiry">
+        <label><span>Your name</span><input name="name" placeholder="Your name" autocomplete="name" required></label>
+        <label><span>Email address</span><input name="email" type="email" placeholder="Email address" autocomplete="email" required></label>
+        <label class="full"><span>Clinic name</span><input name="clinic" placeholder="Clinic name" autocomplete="organization"></label>
+        <label class="full"><span>What you'd like</span><select name="topic"><option>A full review (£295)</option><option>A question before booking</option></select></label>
+        <label class="full"><span>Message</span><textarea name="message" placeholder="Your website address, and anything I should know"></textarea></label>
+        <div class="full"><button class="btn light" type="submit">Send enquiry <svg class="chev"><use href="#chev"/></svg></button></div>
+        <p class="note">This opens your email app with your message filled in, ready to send.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap row">
+    <a class="brand" href="#"><img src="img/jp-mark.png" alt="" width="200" height="169"><span>John Pantelopoulos</span></a>
+    <nav class="links" aria-label="Footer">
+      <a href="#">Home</a><a href="#services">Services</a><a href="#process">Our process</a><a href="#why">Why me</a><a href="#contact">Contact</a>
+    </nav>
+    <p class="tag">Clear wording.<br>Fewer surprises.</p>
+  </div>
+  <div class="wrap legal">
+    <p>© 2026 John Pantelopoulos, sole trader, ABN 29 480 868 567. Not affiliated with the ASA, CAP or the MHRA. Photos from Pexels.</p>
+    <details id="privacy">
+      <summary>Privacy notice</summary>
+      <p><b>Who I am.</b> John Pantelopoulos, sole trader, ABN 29 480 868 567. Contact: john@jpaudits.co.uk. I decide how the information below is used.</p>
+      <h3>What I collect and where it comes from</h3>
+      <p>Business contact details that clinics publish on their own websites, such as a clinic's general email address and company name. The content of emails you send me. For paying clients, invoicing details and the public pages and posts reviewed.</p>
+      <h3>Why I use it</h3>
+      <p>To send a single business email to a clinic about the advertising on its own website, to deliver reviews clients have paid for, and to keep tax and accounting records. For outreach, the basis is legitimate interests (UK GDPR Article 6(1)(f)): offering a relevant service to a business, using contact details that business has published. For clients, the basis is the contract.</p>
+      <h3>Your right to object</h3>
+      <p>Reply "unsubscribe" to any email, or write to the address above, and I will not contact you again. Requests are actioned within 5 business days. I keep a short suppression list so the address is not contacted in future.</p>
+      <h3>Patient images</h3>
+      <p>Reviews describe before-and-after photos and testimonials in words. I do not copy or store images of patients.</p>
+      <h3>Who else handles it</h3>
+      <p>My email provider (Zoho) and my payment provider process data on my behalf. I do not sell or share contact details with anyone else.</p>
+      <h3>Where it is held and for how long</h3>
+      <p>Records are held by me in Australia and by the providers above. Outreach records are kept for 12 months. Client and invoicing records are kept for 7 years for tax purposes.</p>
+      <h3>Your rights</h3>
+      <p>You can ask for a copy of the information I hold about you, or ask for it to be corrected or deleted. You can also complain to the UK Information Commissioner's Office at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
+      <p>Last updated 25 October 2026.</p>
+    </details>
+  </div>
+</footer>
+<script>
+(function () {
+  var priv = document.getElementById('privacy');
+  function openPrivacy() { if (location.hash === '#privacy') priv.open = true; }
+  window.addEventListener('hashchange', openPrivacy); openPrivacy();
+  var f = document.getElementById('enquiry');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = new FormData(f);
+    var body = 'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\nClinic: ' + d.get('clinic') + '\n\n' + d.get('message');
+    location.href = 'mailto:john@jpaudits.co.uk?subject=' + encodeURIComponent(d.get('topic') + (d.get('clinic') ? ' – ' + d.get('clinic') : '')) + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+</body></html>

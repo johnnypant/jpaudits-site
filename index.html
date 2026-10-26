@@ -4,195 +4,231 @@
 <meta name="description" content="Advertising reviews for UK aesthetic clinics. Your website, Google listing and Instagram checked for prescription-medicine wording, with replacement copy. £295 fixed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Montserrat:wght@500;600&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 :root {
   color-scheme: light;
-  --paper: #f7f2f0;
-  --card: #fffdfc;
-  --ink: #1b2e2c;
-  --ink-soft: #4d5b59;
-  --muted: #7d8786;
-  --blush: #ecdcd5;
-  --rose: #b4566a;
-  --rose-tint: #f3d6dc;
-  --line: #e2d6d1;
-  --band: #1b2e2c;
-  --band-text: #f7f2f0;
-  --btn: #1b2e2c;
-  --btn-text: #f7f2f0;
-  --shadow: 0 1px 2px rgba(27,46,44,.06), 0 18px 40px -18px rgba(27,46,44,.28);
+  --bg: #ffffff;
+  --soft: #f4f6f8;
+  --navy: #0d2238;
+  --text: #4f5b67;
+  --muted: #7b8794;
+  --line: #e1e6eb;
+  --icon: #eef2f6;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.6 "Hanken Grotesk", system-ui, sans-serif; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 15px/1.6 "DM Sans", system-ui, sans-serif; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
-:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; border-radius: 4px; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-h1, h2, h3 { font-family: "Bodoni Moda", Georgia, serif; font-weight: 600; font-variation-settings: "opsz" 28; letter-spacing: -.01em; line-height: 1.08; margin: 0; }
-h1 { font-size: clamp(40px, 6vw, 68px); }
-h2 { font-size: clamp(30px, 4vw, 44px); }
-h3 { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 19px; font-weight: 600; letter-spacing: 0; }
+:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 500; color: var(--navy); margin: 0; letter-spacing: -.01em; line-height: 1.12; }
+h1 { font-size: clamp(32px, 5.4vw, 54px); }
+h2 { font-size: clamp(26px, 3.6vw, 38px); }
+h3 { font-size: 17px; }
 p { margin: 0; }
-.btn { display: inline-block; background: var(--btn); color: var(--btn-text); text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 999px; transition: transform .15s ease; }
-.btn:hover { transform: translateY(-1px); }
-@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+.eyebrow { font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 12px; font-family: "Montserrat", sans-serif; font-weight: 500; font-size: 14px; text-decoration: none; padding: 14px 22px; background: var(--navy); color: #fff; border: 1px solid var(--navy); border-radius: 3px; }
+.btn svg { width: 16px; height: 16px; }
+.btn.ghost { background: transparent; border-color: rgba(255,255,255,.7); }
 
 /* header */
-.top { padding: 22px 0; }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; }
-.brand img { width: 34px; }
-.top a.mail { font-size: 15px; color: var(--ink-soft); text-decoration-color: var(--line); text-underline-offset: 4px; }
+.top { background: #fff; position: sticky; top: 0; z-index: 5; border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.brand img { width: 44px; }
+.brand span { border-left: 1px solid var(--navy); padding-left: 14px; font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--navy); line-height: 1.3; }
+.links { display: flex; gap: 28px; font-family: "Montserrat", sans-serif; font-size: 13px; font-weight: 500; }
+.links a { text-decoration: none; color: var(--navy); }
+.menu { display: none; position: relative; }
+.menu summary { list-style: none; cursor: pointer; padding: 8px; color: var(--navy); }
+.menu summary::-webkit-details-marker { display: none; }
+.menu summary svg { width: 28px; height: 28px; display: block; }
+.menu nav { position: absolute; right: 0; top: 48px; background: #fff; border: 1px solid var(--line); box-shadow: 0 12px 30px -10px rgba(13,34,56,.25); min-width: 200px; padding: 8px 0; }
+.menu nav a { display: block; padding: 12px 20px; text-decoration: none; color: var(--navy); font-family: "Montserrat", sans-serif; font-size: 14px; font-weight: 500; }
 
 /* hero */
-.hero { padding: 48px 0 96px; }
-.hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
-.hero p.lead { font-size: 19px; color: var(--ink-soft); margin: 22px 0 28px; max-width: 30em; }
-.hero .terms { margin-top: 18px; font-size: 15px; color: var(--muted); }
+.hero { position: relative; background: #dfe5ea url("img/p207675.jpg") 75% center / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(244,246,248,.98) 0%, rgba(244,246,248,.93) 45%, rgba(244,246,248,.3) 75%, rgba(244,246,248,0) 100%); }
+.hero .wrap { position: relative; padding-top: 72px; padding-bottom: 80px; }
+.hero .copy { max-width: 520px; }
+.hero p.lead { margin: 18px 0 26px; font-size: 16px; color: #3f4c58; max-width: 30em; }
+.hero .terms { margin-top: 14px; font-size: 13px; color: #5d6b78; }
 
-/* the report card: the one memorable thing */
-.doc { background: var(--card); border-radius: 18px; box-shadow: var(--shadow); padding: 26px 26px 22px; transform: rotate(1.4deg); border: 1px solid var(--line); }
-.doc .meta { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--muted); padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
-.doc .lbl { font-size: 13px; font-weight: 600; color: var(--muted); margin: 14px 0 4px; }
-.doc .lbl:first-of-type { margin-top: 0; }
-.doc .found { font-size: 16px; }
-.doc del { text-decoration: line-through; text-decoration-color: var(--rose); text-decoration-thickness: 2px; background: var(--rose-tint); padding: 0 3px; border-radius: 3px; }
-.doc .fix { font-size: 16px; background: var(--blush); border-radius: 10px; padding: 10px 12px; }
-.doc a { color: var(--rose); }
-.caption { font-size: 13px; color: var(--muted); margin-top: 18px; text-align: center; }
+/* what's checked */
+.what { padding: 64px 0; background: var(--soft); }
+.what .head p { margin-top: 12px; max-width: 32em; }
+.rows { list-style: none; margin: 28px 0 0; padding: 0; max-width: 640px; }
+.rows li { display: grid; grid-template-columns: 64px 1fr; gap: 18px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.rows li:last-child { border-bottom: 0; }
+.ico { width: 64px; height: 64px; border-radius: 50%; background: #fff; border: 1px solid var(--line); display: grid; place-items: center; color: var(--navy); }
+.ico svg { width: 26px; height: 26px; }
+.rows h3 { font-size: 16px; }
+.rows p { font-size: 13.5px; color: var(--muted); margin-top: 3px; }
 
-/* offer */
-.offer { padding: 96px 0; background: var(--blush); border-radius: 32px; margin: 0 12px; }
-.offer .wrap { display: grid; grid-template-columns: 1fr 380px; gap: 56px; align-items: start; }
-.offer ul.get { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 18px; }
-.offer ul.get li { font-size: 19px; padding-left: 30px; position: relative; }
-.offer ul.get li::before { content: ""; position: absolute; left: 0; top: .8em; width: 14px; height: 2px; background: var(--rose); }
-.price { background: var(--card); border-radius: 22px; padding: 30px; box-shadow: var(--shadow); }
-.price .amt { font-family: "Bodoni Moda", Georgia, serif; font-size: 72px; line-height: 1; font-weight: 600; }
-.price .per { color: var(--muted); margin: 6px 0 20px; }
-.price ul { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 10px; }
-.price li { padding-left: 26px; position: relative; }
-.price li::before { content: ""; position: absolute; left: 2px; top: .3em; width: 6px; height: 11px; border: solid var(--rose); border-width: 0 2px 2px 0; transform: rotate(45deg); }
-.price .btn { display: block; text-align: center; }
-.price .small { font-size: 14px; color: var(--muted); margin-top: 12px; }
-.price .guarantee { font-size: 15px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+/* sample */
+.sample { padding: 72px 0; }
+.sample .wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: center; }
+.sample .head p { margin-top: 12px; }
+.entry { border: 1px solid var(--line); background: #fff; box-shadow: 0 18px 40px -20px rgba(13,34,56,.3); }
+.entry header { display: flex; justify-content: space-between; gap: 12px; padding: 12px 18px; background: var(--navy); color: #c9d3dd; font-family: "Montserrat", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.entry .b { padding: 18px; }
+.entry .k { font-family: "Montserrat", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 16px 0 6px; }
+.entry .k:first-child { margin-top: 0; }
+.entry .q { font-family: "Source Serif 4", serif; font-size: 17px; color: var(--navy); line-height: 1.45; }
+.entry del { text-decoration-color: #b23a48; text-decoration-thickness: 2px; color: #8a2f3b; }
+.entry .fix { background: var(--soft); border-left: 3px solid var(--navy); padding: 10px 14px; }
+.entry a { color: var(--navy); }
+.cap { font-size: 12.5px; color: var(--muted); margin-top: 12px; }
 
-/* steps */
-.steps { padding: 104px 0 88px; }
-.steps ol { list-style: none; padding: 0; margin: 40px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: s; }
-.steps li { counter-increment: s; border-top: 1px solid var(--ink); padding-top: 18px; }
-.steps li::before { content: counter(s); font-family: "Bodoni Moda", Georgia, serif; font-size: 40px; line-height: 1; display: block; margin-bottom: 14px; color: var(--rose); }
-.steps li p { color: var(--ink-soft); margin-top: 8px; }
+/* how it works band */
+.band { position: relative; background: var(--navy) url("img/p8171870.jpg") center / cover no-repeat; color: #c9d3dd; }
+.band::before { content: ""; position: absolute; inset: 0; background: rgba(13,34,56,.92); }
+.band .wrap { position: relative; padding-top: 64px; padding-bottom: 64px; }
+.band h2, .band h3 { color: #fff; }
+.band .eyebrow { color: #9fb0c1; }
+.steps { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: s; }
+.steps li { counter-increment: s; border-top: 1px solid rgba(255,255,255,.2); padding-top: 18px; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(255,255,255,.5); color: #fff; font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.steps p { font-size: 14px; margin-top: 6px; }
+
+/* price */
+.price { padding: 72px 0; background: var(--soft); }
+.price .wrap { display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: center; }
+.price .head p { margin-top: 12px; max-width: 30em; }
+.card { background: #fff; border: 1px solid var(--line); padding: 28px; box-shadow: 0 18px 40px -22px rgba(13,34,56,.3); }
+.amt { font-family: "Source Serif 4", serif; font-size: 52px; color: var(--navy); line-height: 1; }
+.amt small { font-family: "DM Sans", sans-serif; font-size: 14px; color: var(--muted); margin-left: 8px; }
+.card ul { list-style: none; padding: 0; margin: 20px 0 24px; display: grid; gap: 10px; }
+.card li { padding-left: 26px; position: relative; color: var(--navy); }
+.card li::before { content: ""; position: absolute; left: 3px; top: .3em; width: 6px; height: 11px; border: solid var(--navy); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.card .btn { width: 100%; justify-content: center; }
+.card .g { font-size: 14px; color: var(--navy); margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.card .small { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
 
 /* about */
-.about { padding: 0 0 104px; }
-.about .wrap { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: center; }
-.about img { border-radius: 20px; aspect-ratio: 600 / 660; object-fit: cover; width: 100%; }
-.about p { font-size: 19px; margin-top: 18px; max-width: 34em; }
-.about .id { font-size: 14px; color: var(--muted); }
+.about { padding: 72px 0; }
+.about .wrap { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; }
+.about img { aspect-ratio: 600 / 660; object-fit: cover; width: 100%; }
+.about p { margin-top: 14px; max-width: 34em; }
+.about .id { font-size: 13px; color: var(--muted); }
 
 /* faq */
-.faq { padding: 0 0 104px; }
+.faq { padding: 0 0 72px; }
 .faq .wrap { max-width: 760px; }
-.faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
-.faq details:first-of-type { border-top: 1px solid var(--line); margin-top: 28px; }
-.faq summary { cursor: pointer; font-weight: 600; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq details:first-of-type { border-top: 1px solid var(--line); margin-top: 24px; }
+.faq summary { cursor: pointer; padding: 16px 0; font-family: "Source Serif 4", serif; font-weight: 500; font-size: 17px; color: var(--navy); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; color: var(--rose); font-size: 22px; line-height: 1; }
+.faq summary::after { content: "+"; font-family: "Montserrat", sans-serif; color: var(--muted); }
 .faq details[open] summary::after { content: "–"; }
-.faq details p { color: var(--ink-soft); margin-top: 10px; }
+.faq details p { padding-bottom: 16px; }
 
 /* close */
-.close { background: var(--band); color: var(--band-text); border-radius: 32px; margin: 0 12px; padding: 88px 0; text-align: center; }
-.close h2 { max-width: 16em; margin: 0 auto; }
-.close p { margin: 18px auto 30px; opacity: .8; }
-.close .btn { background: var(--band-text); color: var(--band); }
+.close { position: relative; background: var(--navy) url("img/p8171870.jpg") center / cover no-repeat; color: #c9d3dd; }
+.close::before { content: ""; position: absolute; inset: 0; background: rgba(13,34,56,.9); }
+.close .wrap { position: relative; padding-top: 64px; padding-bottom: 64px; }
+.close h2 { color: #fff; max-width: 14em; }
+.close p { margin: 14px 0 26px; }
 
 /* footer */
-.foot { padding: 40px 0 56px; font-size: 14px; color: var(--muted); }
+.foot { padding: 32px 0 48px; font-size: 13px; color: var(--muted); }
 .foot details { margin-top: 10px; }
 .foot summary { cursor: pointer; }
-.foot details h3 { font-family: inherit; font-size: 15px; font-weight: 600; color: var(--ink); margin: 16px 0 4px; }
+.foot details h3 { font-family: inherit; font-size: 14px; font-weight: 600; color: var(--navy); margin: 16px 0 4px; }
 .foot details p { margin-top: 6px; }
 
 @media (max-width: 860px) {
-  .wrap { padding: 0 16px; }
-  .hero { padding: 24px 0 72px; }
-  .hero .wrap, .offer .wrap, .about .wrap { grid-template-columns: 1fr; gap: 40px; }
-  .doc { transform: none; }
-  .offer, .close { margin: 0; border-radius: 24px; padding: 64px 0; }
-  .steps { padding: 72px 0 64px; }
-  .steps ol { grid-template-columns: 1fr; gap: 24px; }
-  .about img { max-width: 220px; }
+  .links { display: none; }
+  .menu { display: block; }
+  .hero::before { background: linear-gradient(90deg, rgba(244,246,248,.97) 0%, rgba(244,246,248,.9) 55%, rgba(244,246,248,.45) 100%); }
+  .hero .wrap { padding-top: 48px; padding-bottom: 52px; }
+  .hero .copy { max-width: 290px; }
+  .hero p.lead { font-size: 15px; }
+  .sample .wrap, .price .wrap, .about .wrap { grid-template-columns: 1fr; gap: 28px; }
+  .steps { grid-template-columns: 1fr; gap: 22px; }
+  .about img { max-width: 200px; }
+  .what, .sample, .price, .about { padding: 52px 0; }
+  .band .wrap, .close .wrap { padding-top: 52px; padding-bottom: 52px; }
 }
-@media (max-width: 420px) { .top a.mail { display: none; } }
+@media (max-width: 380px) { .brand span { font-size: 11px; letter-spacing: .12em; } }
 </style>
 </head><body>
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#"><img src="img/jp-mark.png" alt="" width="200" height="169"><span>John Pantelopoulos</span></a>
-    <a class="mail" href="mailto:john@jpaudits.co.uk">john@jpaudits.co.uk</a>
+    <a class="brand" href="#"><img src="img/jp-mark.png" alt="" width="200" height="169"><span>John<br>Pantelopoulos</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#sample">Sample</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a>
+    </nav>
+    <details class="menu">
+      <summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg></summary>
+      <nav aria-label="Main">
+        <a href="#sample">Sample report</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a><a href="#faq">Questions</a>
+      </nav>
+    </details>
   </div>
 </header>
 
 <main>
   <section class="hero">
     <div class="wrap">
-      <div>
-        <h1>Advertising reviews for UK aesthetic clinics.</h1>
+      <div class="copy">
+        <p class="eyebrow">For UK aesthetic clinics</p>
+        <h1>Advertising reviews for aesthetic clinics.</h1>
         <p class="lead">I check your website, Google listing and Instagram for prescription-medicine wording, then send you replacement copy you can paste straight in.</p>
-        <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
+        <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <p class="terms">£295 fixed. Report within 5 working days.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="what">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What I check</p>
+        <h2>Everything a patient sees before they book.</h2>
+      </div>
+      <ul class="rows">
+        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="15" rx="1.5"/><path d="M3 8h18"/></svg></span><div><h3>Website pages</h3><p>Treatment pages, price lists, offers and blog posts.</p></div></li>
+        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><h3>Google Business Profile</h3><p>Your description, services, posts and the text Google shows in search.</p></div></li>
+        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg></span><div><h3>Instagram</h3><p>Your bio, highlights and recent posts.</p></div></li>
+        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></span><div><h3>Replacement wording</h3><p>Every flagged line quoted, with the rule it relates to and new copy to use.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sample" id="sample">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Sample report</p>
+        <h2>What you get, line by line.</h2>
+        <p>Each item shows what I found, where, the guidance it relates to, and wording you can use instead.</p>
+      </div>
       <div>
-        <article class="doc" aria-label="Sample report entry">
-          <div class="meta"><span>Entry 7 of 22</span><span>Google search description</span></div>
-          <p class="lbl">Found</p>
-          <p class="found">"Aesthetic treatment prices in [town]. <del>Botox from £185</del>, lip fillers from £285…"</p>
-          <p class="lbl">Guidance</p>
-          <p><a href="https://www.asa.org.uk/type/non_broadcast/code_section/12.html" target="_blank" rel="noopener">CAP Code rule 12.12</a></p>
-          <p class="lbl">Suggested wording</p>
-          <p class="fix">"Aesthetic treatment prices in [town]. Lip fillers from £285, microneedling from £195. Consultations for lines and wrinkles."</p>
+        <article class="entry" aria-label="Sample report entry">
+          <header><span>Entry 7 of 22</span><span>Google search text</span></header>
+          <div class="b">
+            <p class="k">Found</p>
+            <p class="q">"Aesthetic treatment prices in [town]. <del>Botox from £185</del>, lip fillers from £285…"</p>
+            <p class="k">Guidance</p>
+            <p><a href="https://www.asa.org.uk/type/non_broadcast/code_section/12.html" target="_blank" rel="noopener">CAP Code rule 12.12</a></p>
+            <p class="k">Suggested wording</p>
+            <p class="q fix">"Aesthetic treatment prices in [town]. Lip fillers from £285, microneedling from £195. Consultations for lines and wrinkles."</p>
+          </div>
         </article>
-        <p class="caption">From a practice review of a real clinic's public pages. Clinic not named.</p>
+        <p class="cap">From a practice review of a real clinic's public pages. Clinic not named.</p>
       </div>
     </div>
   </section>
 
-  <section class="offer" id="offer">
+  <section class="band" id="how">
     <div class="wrap">
-      <div>
-        <h2>One review. Everything a patient sees before they book.</h2>
-        <ul class="get">
-          <li>Every flagged line, quoted, with where it appears.</li>
-          <li>The published rule it relates to, linked.</li>
-          <li>Draft replacement wording for each one.</li>
-        </ul>
-      </div>
-      <div class="price">
-        <div class="amt">£295</div>
-        <p class="per">One-off. No retainer.</p>
-        <ul>
-          <li>Website pages</li>
-          <li>Google Business Profile</li>
-          <li>Instagram posts and bio</li>
-          <li>PDF report in 5 working days</li>
-        </ul>
-        <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
-        <p class="guarantee">If I find fewer than 3 items to flag, I refund the full £295.</p>
-        <p class="small">No UK VAT charged. Reverse charge applies if you're VAT registered.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="steps">
-    <div class="wrap">
-      <h2>How it works</h2>
-      <ol>
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps, all by email.</h2>
+      <ol class="steps">
         <li><h3>Email me</h3><p>Your clinic name and website. I reply with terms and a £295 invoice.</p></li>
         <li><h3>I review</h3><p>Website, Google listing and Instagram, within 5 working days of payment.</p></li>
         <li><h3>You get the report</h3><p>A PDF with every item and its new wording. Questions answered by email.</p></li>
@@ -200,10 +236,33 @@ p { margin: 0; }
     </div>
   </section>
 
-  <section class="about">
+  <section class="price" id="price">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Price</p>
+        <h2>One review, one fixed fee.</h2>
+        <p>No retainer and no subscription. Pay once, get the report, keep it.</p>
+      </div>
+      <div class="card">
+        <div class="amt">£295<small>one-off</small></div>
+        <ul>
+          <li>Website pages</li>
+          <li>Google Business Profile</li>
+          <li>Instagram posts and bio</li>
+          <li>PDF report in 5 working days</li>
+        </ul>
+        <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
+        <p class="g">If I find fewer than 3 items to flag, I refund the full £295.</p>
+        <p class="small">No UK VAT charged. Reverse charge applies if you're VAT registered.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
     <div class="wrap">
       <img src="img/john.jpg" alt="John Pantelopoulos" width="600" height="660">
       <div>
+        <p class="eyebrow">About</p>
         <h2>Hi, I'm John.</h2>
         <p>I review aesthetic clinic advertising against the published rules on prescription-only medicines. It's the only thing I do. I work on my own, by email, from Australia, so your report is often waiting when you start your day.</p>
         <p class="id">Sole trader, ABN 29 480 868 567. Not affiliated with the ASA, CAP or the MHRA.</p>
@@ -211,9 +270,10 @@ p { margin: 0; }
     </div>
   </section>
 
-  <section class="faq">
+  <section class="faq" id="faq">
     <div class="wrap">
-      <h2>Questions</h2>
+      <p class="eyebrow">Questions</p>
+      <h2>Before you book.</h2>
       <details><summary>Is this legal advice?</summary><p>No. Each item links to the published guidance it relates to, and you decide what to change.</p></details>
       <details><summary>Will you report my clinic to anyone?</summary><p>No. I have no connection to any regulator, and I don't share what I find with anyone.</p></details>
       <details><summary>Will new wording affect my Google rankings?</summary><p>It can. Taking product names out may reduce traffic for those names, and I can't promise any ranking outcome.</p></details>
@@ -223,9 +283,10 @@ p { margin: 0; }
 
   <section class="close">
     <div class="wrap">
+      <p class="eyebrow" style="color:#9fb0c1">Get started</p>
       <h2>Want your clinic's advertising reviewed?</h2>
       <p>Email your clinic name and website. I reply within one working day.</p>
-      <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
+      <a class="btn ghost" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </section>
 </main>
@@ -259,6 +320,8 @@ p { margin: 0; }
   var priv = document.getElementById('privacy');
   function openPrivacy() { if (location.hash === '#privacy') priv.open = true; }
   window.addEventListener('hashchange', openPrivacy); openPrivacy();
+  var menu = document.querySelector('.menu');
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.open = false; }); });
 })();
 </script>
 </body></html>

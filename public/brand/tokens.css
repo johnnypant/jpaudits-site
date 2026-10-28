@@ -68,7 +68,7 @@
 .t-small   { font: 400 14px/22px var(--font-sans); }
 
 /* graphics (paths relative to this file) */
-.ds-step-strip { height: 24px; background: url("step-strip-gold.svg") repeat-x left center; }
+.ds-step-strip { height: 24px; background: var(--surface) url("step-strip-gold.svg") repeat-x left center; }
 .ds-divider { max-width: 600px; height: 48px; margin: var(--space-8) auto; background: url("divider-navy.svg") center / contain no-repeat; }
 .theme-dark .ds-divider { background-image: url("divider-gold.svg"); }
 .ds-pattern { background: var(--navy-900) url("pattern-navy.svg") repeat; }

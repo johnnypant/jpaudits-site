@@ -68,7 +68,9 @@
 .t-small   { font: 400 14px/22px var(--font-sans); }
 
 /* graphics (paths relative to this file) */
-.ds-step-strip { height: 24px; background: var(--surface) url("step-strip-gold.svg") repeat-x left center; }
+/* step strip: solid above the gold line, transparent below it */
+.ds-step-strip { position: relative; isolation: isolate; height: 24px; background: url("step-strip-gold.svg") repeat-x left center; }
+.ds-step-strip::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--surface); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 24'%3E%3Cpath d='M0,0H48V20H36V4H12V20H0Z'/%3E%3C/svg%3E") repeat-x left center / 48px 24px; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 24'%3E%3Cpath d='M0,0H48V20H36V4H12V20H0Z'/%3E%3C/svg%3E") repeat-x left center / 48px 24px; }
 .ds-divider { max-width: 600px; height: 48px; margin: var(--space-8) auto; background: url("divider-navy.svg") center / contain no-repeat; }
 .theme-dark .ds-divider { background-image: url("divider-gold.svg"); }
 .ds-pattern { background: var(--navy-900) url("pattern-navy.svg") repeat; }

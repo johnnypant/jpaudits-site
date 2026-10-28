@@ -32,7 +32,8 @@ section { padding: var(--space-24) 0; }
 .head-row > p { max-width: 30em; text-align: right; color: var(--ink-muted); }
 
 /* header */
-.top { background: var(--surface); position: sticky; top: 0; z-index: 5; }
+.top { position: sticky; top: 0; z-index: 5; }
+.top-bar { background: var(--surface); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 88px; }
 .brand img { width: 192px; }
 .links { display: flex; align-items: center; gap: var(--space-8); font-size: 16px; }
@@ -172,7 +173,7 @@ section { padding: var(--space-24) 0; }
 </head><body>
 
 <header class="top">
-  <div class="wrap">
+  <div class="top-bar"><div class="wrap">
     <a class="brand" href="#"><img src="public/brand/logo-lockup-transparent.png" alt="John Pantelo" width="1646" height="342"></a>
     <nav class="links" aria-label="Main">
       <a href="#sample">Sample</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a>
@@ -184,7 +185,7 @@ section { padding: var(--space-24) 0; }
         <a href="#sample">Sample report</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a><a href="#faq">Questions</a>
       </nav>
     </details>
-  </div>
+  </div></div>
   <div class="ds-step-strip" aria-hidden="true"></div>
 </header>
 

@@ -2,203 +2,178 @@
 <title>John Pantelopoulos Reviews</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Advertising reviews for UK aesthetic clinics. Your website, Google listing and Instagram checked for prescription-medicine wording, with replacement copy. £295 fixed.">
+<link rel="icon" type="image/png" href="public/brand/logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/brand/tokens.css">
 <style>
-:root {
-  color-scheme: light;
-  --bg: #ffffff;
-  --navy: #000080;
-  --navy-hover: #000073;
-  --ink: #00002d;
-  --pill: #e6e6f2;
-  --pill-hover: #d9d9ec;
-  --text: #45475a;
-  --muted: #6e7187;
-  --line: #e4e4ee;
-  --card-shadow: 0 5px 16px rgba(8,15,52,.06);
-  --btn-shadow: 0 6px 16px rgba(0,0,128,.18);
-  --r: 16px;
-}
+/* Layout only. Colours, fonts, spacing and graphics come from public/brand/tokens.css. */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--bg); color: var(--text); font: 400 15px/1.65 "Poppins", system-ui, sans-serif; }
+body { margin: 0; background: var(--surface); color: var(--ink); font: 400 16px/26px var(--font-sans); }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
-:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
-.wrap { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+:focus-visible { outline: 2px solid var(--ornament); outline-offset: 3px; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 var(--space-4); }
 @media (min-width: 900px) { .wrap { padding: 0 80px; } }
-h1, h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; color: var(--navy); margin: 0; line-height: 1.2; }
-h1 { font-size: clamp(34px, 4.6vw, 54px); }
-h2 { font-size: clamp(26px, 3vw, 36px); }
-h3 { font-family: "Poppins", sans-serif; font-weight: 500; font-size: 19px; color: var(--navy); margin: 0; line-height: 1.3; }
+h1, h2, h3 { margin: 0; color: var(--ink); }
+h1 { font: 800 60px/64px var(--font-display); letter-spacing: -0.03em; }
+h1 em { font-style: normal; color: var(--accent); }
+h2 { font: 700 28px/36px var(--font-display); letter-spacing: -0.01em; }
+h3 { font: 500 18px/26px var(--font-sans); }
 p { margin: 0; }
-section { padding: 72px 0; }
-.pill { display: inline-block; background: var(--pill); color: var(--navy); font-size: 14px; padding: 5px 20px; border-radius: 999px; margin-bottom: 12px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font: 500 16px/1 "Poppins", sans-serif; text-decoration: none; padding: 16px 32px; background: var(--navy); color: #fff; border: 0; border-radius: 10px; box-shadow: var(--btn-shadow); }
-.btn:hover { background: var(--navy-hover); }
-.btn.light { background: #fff; color: var(--navy); box-shadow: none; }
-.card { background: #fff; border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--card-shadow); }
-.head-row { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 36px; }
-.head-row > p { max-width: 30em; text-align: right; }
+section { padding: var(--space-24) 0; }
+.eyebrow { display: block; font: 600 12px/16px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: var(--space-4); }
+.btn { display: inline-flex; align-items: center; justify-content: center; font: 500 16px/1 var(--font-sans); text-decoration: none; padding: var(--space-4) var(--space-8); background: var(--block); color: var(--surface); border-radius: var(--radius-sm); }
+.btn:hover { opacity: .9; }
+.head-row { display: flex; justify-content: space-between; align-items: end; gap: var(--space-8); margin-bottom: var(--space-12); }
+.head-row > p { max-width: 30em; text-align: right; color: var(--ink-muted); }
 
 /* header */
-.top { background: #fff; position: sticky; top: 0; z-index: 5; }
+.top { background: var(--surface); position: sticky; top: 0; z-index: 5; }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 88px; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.brand img { width: 40px; }
-.brand span { font-family: "Playfair Display", serif; font-weight: 600; font-size: 22px; color: var(--navy); text-transform: uppercase; letter-spacing: .01em; }
-.links { display: flex; align-items: center; gap: 36px; font-size: 16px; }
-.links a { text-decoration: none; color: var(--navy); }
-.links .btn { padding: 11px 20px; font-size: 14px; color: #fff; }
+.brand img { width: 192px; }
+.links { display: flex; align-items: center; gap: var(--space-8); font-size: 16px; }
+.links a { text-decoration: none; color: var(--ink); }
+.links .btn { padding: 12px 20px; font-size: 14px; color: var(--surface); }
 .menu { display: none; position: relative; }
-.menu summary { list-style: none; cursor: pointer; padding: 8px; color: var(--navy); }
+.menu summary { list-style: none; cursor: pointer; padding: var(--space-2); color: var(--ink); }
 .menu summary::-webkit-details-marker { display: none; }
 .menu summary svg { width: 28px; height: 28px; display: block; }
-.menu nav { position: absolute; right: 0; top: 52px; background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 30px -10px rgba(0,0,45,.25); min-width: 210px; padding: 8px 0; }
-.menu nav a { display: block; padding: 12px 20px; text-decoration: none; color: var(--navy); font-size: 15px; }
+.menu nav { position: absolute; right: 0; top: 52px; background: var(--surface); border: var(--line-hairline) solid var(--ornament); min-width: 210px; padding: var(--space-2) 0; }
+.menu nav a { display: block; padding: 12px 20px; text-decoration: none; color: var(--ink); font-size: 15px; }
 
 /* hero */
-.hero { padding: 0 0 72px; }
-.hero .frame { position: relative; }
-.hero .photo { position: relative; border-radius: 20px; overflow: hidden; background: #e9edf2 url("img/p207675.jpg") 80% center / cover no-repeat; min-height: 620px; display: flex; align-items: center; }
-.hero .photo::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(240,242,246,.97) 0%, rgba(240,242,246,.9) 42%, rgba(240,242,246,.15) 72%, rgba(240,242,246,0) 100%); }
-.hero .copy { position: relative; max-width: 560px; padding: 64px 70px; }
-.hero p.lead { margin: 22px 0 32px; font-size: 17px; color: #2f3145; max-width: 30em; }
-.hero .copy .btn { min-width: 210px; }
-.hero .facts { position: absolute; right: 0; bottom: 0; width: 300px; padding: 24px; background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--card-shadow); outline: 12px solid #fff; }
-.hero .facts .amt { font-family: "Playfair Display", serif; font-size: 40px; color: var(--navy); line-height: 1; }
-.hero .facts .amt small { font-family: "Poppins", sans-serif; font-size: 14px; color: var(--muted); margin-left: 6px; }
-.hero .facts p { margin-top: 10px; font-size: 14px; }
+.hero { padding: var(--space-6) 0 var(--space-24); }
+.hero .panel { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; padding: 64px; background: var(--surface) url("public/brand/hero-navy.svg") right center / cover no-repeat; }
+.hero p.lead { margin: var(--space-6) 0 var(--space-8); font-size: 17px; line-height: 28px; max-width: 30em; }
+.hero .cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); }
+.hero .cta .btn { min-width: 200px; }
+.hero .terms { font-size: 14px; color: var(--ink-muted); }
+.who { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-8); padding-top: var(--space-6); border-top: var(--line-hairline) solid var(--ornament); }
+.who img { width: 56px; height: 56px; object-fit: cover; object-position: center 20%; }
+.who b { display: block; font-weight: 500; font-size: 15px; }
+.who span { font-size: 14px; color: var(--ink-muted); }
+.hero .cap { font-size: 14px; line-height: 22px; color: var(--ink-muted); margin-top: 12px; }
+
+/* sample report entry (cream card, used in the hero) */
+.entry { position: relative; background: var(--cream-50); color: var(--navy-900); }
+.entry::before { content: ""; position: absolute; top: var(--space-6); right: var(--space-6); width: 28px; height: 28px; background: url("public/brand/corner-gold.svg") center / contain no-repeat; transform: scaleX(-1); }
+.entry header { display: flex; gap: var(--space-4); padding: var(--space-4) var(--space-6); background: var(--cream-200); font-size: 13px; font-weight: 500; }
+.entry header span:last-child { margin-right: 40px; margin-left: auto; color: var(--slate-600); }
+.entry .b { padding: var(--space-6); }
+.entry .k { font: 600 12px/16px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-700); margin: 20px 0 6px; }
+.entry .k:first-child { margin-top: 0; }
+.entry .q { font-size: 17px; line-height: 27px; color: var(--navy-900); }
+.entry del { text-decoration-thickness: 2px; color: var(--slate-600); }
+.entry .fix { background: var(--cream-200); padding: 14px var(--space-4); }
+.entry a { color: var(--gold-700); }
 
 /* what's checked */
-.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; list-style: none; margin: 0; padding: 0; }
-.tiles li { padding: 30px 22px; }
-.tiles li:first-child { background: var(--navy); border-color: var(--navy); }
-.tiles li:first-child h3, .tiles li:first-child svg { color: #fff; }
-.tiles li:first-child p { color: #d9d9ec; }
-.tiles svg { width: 42px; height: 42px; color: var(--navy); margin-bottom: 18px; }
-.tiles p { font-size: 14px; color: var(--muted); margin-top: 10px; }
-
-/* sample */
-.sample .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; }
-.sample .head p { margin-top: 18px; max-width: 28em; }
-.sample .cap { font-size: 13px; color: var(--muted); margin-top: 14px; }
-.entry { overflow: hidden; }
-.entry header { display: flex; justify-content: space-between; gap: 12px; padding: 14px 24px; background: var(--navy); color: #d9d9ec; font-size: 13px; font-weight: 500; }
-.entry .b { padding: 24px; }
-.entry .k { font-size: 12px; font-weight: 500; color: var(--muted); margin: 18px 0 6px; }
-.entry .k:first-child { margin-top: 0; }
-.entry .q { font-family: "Playfair Display", serif; font-size: 18px; color: var(--ink); line-height: 1.5; }
-.entry del { text-decoration-color: #b23a48; text-decoration-thickness: 2px; color: #8a2f3b; }
-.entry .fix { background: var(--pill); border-radius: 10px; padding: 14px 16px; }
-.entry a { color: var(--navy); }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); list-style: none; margin: 0; padding: 0; }
+.tiles li { padding: var(--space-8) var(--space-6); background: var(--surface-alt); }
+.tiles svg { width: 40px; height: 40px; color: var(--ink); margin-bottom: 18px; }
+.tiles li.theme-dark { background: var(--surface); }
+.tiles li.theme-dark svg { color: var(--accent); }
+.tiles p { font-size: 14px; line-height: 22px; color: var(--ink-muted); margin-top: 10px; }
 
 /* how it works */
-.how { background: #f6f6fb; }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: s; }
-.steps li { counter-increment: s; padding: 30px 26px; }
-.steps li::before { content: counter(s); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 15px; font-weight: 500; margin-bottom: 18px; }
-.steps p { font-size: 14px; color: var(--muted); margin-top: 10px; }
+.how { background: var(--surface-alt); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); counter-reset: s; }
+.steps li { counter-increment: s; padding: var(--space-8) var(--space-6); background: var(--surface); }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 40px; height: 40px; background: var(--block); color: var(--surface); font: 700 16px/1 var(--font-display); margin-bottom: 18px; }
+.steps p { font-size: 14px; line-height: 22px; color: var(--ink-muted); margin-top: 10px; }
 
 /* price */
-.price .grid { display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: center; }
-.price .head p { margin-top: 18px; max-width: 28em; }
-.price .card { padding: 34px; }
-.amt-big { font-family: "Playfair Display", serif; font-size: 56px; color: var(--navy); line-height: 1; }
-.amt-big small { font-family: "Poppins", sans-serif; font-size: 15px; color: var(--muted); margin-left: 8px; }
-.price ul { list-style: none; padding: 0; margin: 24px 0 28px; display: grid; gap: 12px; }
-.price li { padding-left: 32px; position: relative; color: var(--ink); }
-.price li::before { content: ""; position: absolute; left: 0; top: .15em; width: 20px; height: 20px; border-radius: 50%; background: var(--pill); }
-.price li::after { content: ""; position: absolute; left: 7px; top: .38em; width: 5px; height: 9px; border: solid var(--navy); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.price .grid { display: grid; grid-template-columns: 1fr 440px; gap: 64px; align-items: center; }
+.price .head p { margin-top: 18px; max-width: 28em; color: var(--ink-muted); }
+.price .box { padding: 48px 44px; outline: var(--line-frame) solid var(--ornament); outline-offset: -14px; }
+.amt-big { font: 800 56px/1 var(--font-display); letter-spacing: -0.03em; color: var(--accent); }
+.amt-big small { font: 400 15px/1 var(--font-sans); letter-spacing: 0; color: var(--ink-muted); margin-left: var(--space-2); }
+.price ul { margin: var(--space-6) 0 var(--space-8); display: grid; gap: 12px; }
 .price .btn { width: 100%; }
-.price .g { font-size: 14px; color: var(--navy); margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
-.price .small { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.price .g { font-size: 14px; line-height: 22px; margin-top: var(--space-6); padding-top: 18px; border-top: var(--line-hairline) solid var(--ornament); }
+.price .small { font-size: 13px; line-height: 20px; color: var(--ink-muted); margin-top: var(--space-2); }
 
 /* about */
-.about .card { display: grid; grid-template-columns: 260px 1fr; overflow: hidden; }
+.about .card { display: grid; grid-template-columns: 260px 1fr; background: var(--surface-alt); }
 .about img { width: 100%; height: 100%; object-fit: cover; }
 .about .txt { padding: 40px 44px; }
-.about .txt p { margin-top: 16px; max-width: 36em; }
-.about .id { font-size: 13px; color: var(--muted); padding-top: 16px; border-top: 1px solid var(--line); }
+.about .txt p { margin-top: var(--space-4); max-width: 36em; }
+.about .id { font-size: 13px; line-height: 20px; color: var(--ink-muted); padding-top: var(--space-4); border-top: var(--line-hairline) solid var(--ornament); }
 
 /* faq */
-.faq .list { max-width: 960px; margin: 0 auto; display: grid; gap: 20px; }
-.faq details { background: #fff; border: 1px solid transparent; border-radius: var(--r); box-shadow: var(--card-shadow); }
-.faq details[open] { border-color: var(--navy); }
-.faq summary { cursor: pointer; padding: 26px 32px; font-weight: 500; font-size: 18px; color: var(--navy); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.faq { padding-top: 0; }
+.faq .list { max-width: 960px; margin: 0 auto; display: grid; gap: var(--space-4); }
+.faq details { background: var(--surface-alt); border: var(--line-hairline) solid transparent; }
+.faq details[open] { border-color: var(--ink); background: var(--surface); }
+.faq summary { cursor: pointer; padding: var(--space-6) var(--space-8); font-weight: 500; font-size: 18px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: ""; flex: none; width: 38px; height: 38px; border-radius: 50%; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000080' stroke-width='2'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center / 18px no-repeat; box-shadow: 0 2px 8px rgba(8,15,52,.12); }
-.faq details[open] summary::after { background: var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") center / 18px no-repeat; }
-.faq details p { padding: 0 32px 26px; max-width: 46em; }
+.faq summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 36px; height: 36px; border: var(--line-hairline) solid var(--ink); font: 400 22px/1 var(--font-sans); }
+.faq details[open] summary::after { content: "–"; background: var(--block); color: var(--surface); }
+.faq details p { padding: 0 var(--space-8) var(--space-6); max-width: 46em; color: var(--ink-muted); }
 
 /* close */
-.close .panel { position: relative; border-radius: 20px; overflow: hidden; background: var(--ink) url("img/p8171870.jpg") center / cover no-repeat; text-align: center; padding: 88px 24px; color: #e6e6f2; }
-.close .panel::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,45,.78); }
-.close .panel > * { position: relative; }
-.close h2 { color: #fff; }
-.close p { margin: 16px auto 30px; max-width: 32em; }
+.close .panel { text-align: center; padding: 88px var(--space-6); }
+.close p { margin: var(--space-4) auto var(--space-8); max-width: 32em; color: var(--ink-muted); }
 
 /* footer */
-.foot { background: var(--ink); color: #b9bbd0; font-size: 14px; padding: 72px 0 48px; }
-.foot .cols { display: flex; justify-content: space-between; gap: 40px; align-items: end; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.25); }
+.foot { font-size: 14px; line-height: 22px; padding: 72px 0 var(--space-12); color: var(--ink-muted); }
+.foot .cols { display: flex; justify-content: space-between; gap: 40px; align-items: end; padding-bottom: var(--space-8); }
 .foot .cols > p { max-width: 24em; }
-.foot h4 { font-size: 20px; font-weight: 500; color: #fff; margin: 0 0 14px; }
-.foot nav a { display: block; text-decoration: none; margin-top: 4px; }
-.foot nav a:hover { color: #fff; }
-.foot .base { text-align: center; padding-top: 28px; }
-.foot .base .mark { font-family: "Playfair Display", serif; font-size: 24px; font-weight: 600; color: #fff; text-transform: uppercase; }
-.foot .base p { margin-top: 4px; }
-.foot details { margin-top: 28px; text-align: left; max-width: 760px; margin-left: auto; margin-right: auto; }
-.foot summary { cursor: pointer; color: #fff; }
-.foot details h3 { font-size: 15px; color: #fff; margin: 18px 0 4px; }
+.foot h4 { font: 700 18px/24px var(--font-display); color: var(--ink); margin: 0 0 14px; }
+.foot nav a { display: block; text-decoration: none; margin-top: var(--space-1); }
+.foot nav a:hover { color: var(--ink); }
+.foot .ds-divider { margin: 0 auto var(--space-8); }
+.foot .base { text-align: center; }
+.foot details { margin-top: 28px; max-width: 760px; margin-left: auto; margin-right: auto; }
+.foot summary { cursor: pointer; color: var(--ink); }
+.foot details h3 { font-size: 15px; margin: 18px 0 var(--space-1); }
 .foot details p { margin-top: 6px; }
-.foot details a { color: #fff; }
+.foot details a { color: var(--accent); }
 
 @media (max-width: 1000px) {
   .tiles { grid-template-columns: repeat(2, 1fr); }
-  .price .grid { grid-template-columns: 1fr 380px; gap: 40px; }
+  .price .grid { grid-template-columns: 1fr 400px; gap: 40px; }
 }
 @media (max-width: 860px) {
   .links { display: none; }
   .menu { display: block; }
   .top .wrap { height: 72px; }
-  .brand span { font-size: 17px; }
-  .brand img { width: 34px; }
-  section { padding: 52px 0; }
-  .hero { padding-bottom: 40px; }
-  .hero .photo { min-height: 0; align-items: flex-start; background-position: 72% center; }
-  .hero .photo::before { background: linear-gradient(180deg, rgba(240,242,246,.96) 0%, rgba(240,242,246,.9) 60%, rgba(240,242,246,.55) 100%); }
-  .hero .copy { padding: 40px 24px 44px; }
-  .hero p.lead { font-size: 15.5px; }
-  .hero .facts { position: static; width: auto; margin-top: 16px; outline: 0; }
-  .head-row { display: block; }
+  .brand img { width: 160px; }
+  section { padding: 56px 0; }
+  .hero { padding: var(--space-4) 0 56px; }
+  .hero .panel { grid-template-columns: 1fr; gap: 36px; padding: 36px 20px; }
+  h1 { font-size: 40px; line-height: 44px; }
+  .hero p.lead { font-size: 16px; line-height: 26px; }
+  .head-row { display: block; margin-bottom: var(--space-8); }
   .head-row > p { text-align: left; margin-top: 14px; }
-  .sample .grid, .price .grid { grid-template-columns: 1fr; gap: 32px; }
-  .steps { grid-template-columns: 1fr; gap: 16px; }
+  .price .grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .price .box { padding: 40px 30px; }
+  .steps { grid-template-columns: 1fr; gap: var(--space-4); }
   .about .card { grid-template-columns: 1fr; }
   .about img { height: 280px; object-position: center 20%; }
-  .about .txt { padding: 28px 24px; }
-  .faq summary { padding: 20px 20px; font-size: 16px; }
+  .about .txt { padding: 28px var(--space-6); }
+  .faq summary { padding: 20px; font-size: 16px; }
   .faq details p { padding: 0 20px 20px; }
   .close .panel { padding: 56px 20px; }
-  .foot { padding-top: 52px; }
+  .foot { padding-top: 56px; }
   .foot .cols { display: block; }
   .foot nav { margin-top: 28px; }
 }
 @media (max-width: 520px) {
-  .tiles { grid-template-columns: 1fr; gap: 16px; }
-  .hero .copy .btn { width: 100%; }
-  .brand span { font-size: 15px; }
+  .tiles { grid-template-columns: 1fr; gap: var(--space-4); }
+  .hero .cta .btn { width: 100%; }
+  .entry header, .entry .b { padding-left: 18px; padding-right: 18px; }
 }
 </style>
 </head><body>
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#"><img src="img/jp-mark.png" alt="" width="200" height="169"><span>John Pantelopoulos</span></a>
+    <a class="brand" href="#"><img src="public/brand/logo-lockup-transparent.png" alt="John Pantelo" width="1646" height="342"></a>
     <nav class="links" aria-label="Main">
       <a href="#sample">Sample</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a>
       <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
@@ -210,24 +185,40 @@ section { padding: 72px 0; }
       </nav>
     </details>
   </div>
+  <div class="ds-step-strip" aria-hidden="true"></div>
 </header>
 
 <main>
   <section class="hero">
     <div class="wrap">
-      <div class="frame">
-        <div class="photo">
-          <div class="copy">
-            <span class="pill">For UK aesthetic clinics</span>
-            <h1>Advertising reviews for aesthetic clinics.</h1>
-            <p class="lead">I check your website, Google listing and Instagram for prescription-medicine wording, then send you replacement copy you can paste straight in.</p>
+      <div class="panel theme-dark">
+        <div class="copy">
+          <span class="eyebrow">For UK aesthetic clinics</span>
+          <h1>Advertising reviews for <em>aesthetic clinics.</em></h1>
+          <p class="lead">I check your website, Google listing and Instagram for prescription-medicine wording, then send you replacement copy you can paste straight in.</p>
+          <div class="cta">
             <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
+            <span class="terms">£295 fixed. Report within 5 working days.</span>
+          </div>
+          <div class="who">
+            <img src="img/john.jpg" alt="" width="600" height="660">
+            <div><b>John Pantelopoulos</b><span>I do every review myself, by email, from Australia.</span></div>
           </div>
         </div>
-        <aside class="facts" aria-label="Price and timing">
-          <div class="amt">£295<small>fixed</small></div>
-          <p>Report within 5 working days. Fewer than 3 items to flag and I refund it in full.</p>
-        </aside>
+        <div id="sample">
+          <article class="entry" aria-label="Sample report entry">
+            <header><span>Entry 7 of 22</span><span>Google search text</span></header>
+            <div class="b">
+              <p class="k">Found</p>
+              <p class="q">"Aesthetic treatment prices in [town]. <del>Botox from £185</del>, lip fillers from £285…"</p>
+              <p class="k">Guidance</p>
+              <p><a href="https://www.asa.org.uk/type/non_broadcast/code_section/12.html" target="_blank" rel="noopener">CAP Code rule 12.12</a></p>
+              <p class="k">Suggested wording</p>
+              <p class="q fix">"Aesthetic treatment prices in [town]. Lip fillers from £285, microneedling from £195. Consultations for lines and wrinkles."</p>
+            </div>
+          </article>
+          <p class="cap">One entry from a sample report, based on a real clinic's public pages. Clinic not named.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -236,41 +227,17 @@ section { padding: 72px 0; }
     <div class="wrap">
       <div class="head-row">
         <div>
-          <span class="pill">What I check</span>
+          <span class="eyebrow">What I check</span>
           <h2>Everything a patient sees before they book.</h2>
         </div>
         <p>Three places patients find you, and new wording for every line I flag.</p>
       </div>
       <ul class="tiles">
-        <li class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="15" rx="1.5"/><path d="M3 8h18"/></svg><h3>Website pages</h3><p>Treatment pages, price lists, offers and blog posts.</p></li>
-        <li class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><h3>Google Business Profile</h3><p>Your description, services, posts and the text Google shows in search.</p></li>
-        <li class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg><h3>Instagram</h3><p>Your bio, highlights and recent posts.</p></li>
-        <li class="card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h3>Replacement wording</h3><p>Every flagged line quoted, with the rule it relates to and new copy to use.</p></li>
+        <li class="theme-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="15"/><path d="M3 8h18"/></svg><h3>Website pages</h3><p>Treatment pages, price lists, offers and blog posts.</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><h3>Google Business Profile</h3><p>Your description, services, posts and the text Google shows in search.</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg><h3>Instagram</h3><p>Your bio, highlights and recent posts.</p></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h3>Replacement wording</h3><p>Every flagged line quoted, with the rule it relates to and new copy to use.</p></li>
       </ul>
-    </div>
-  </section>
-
-  <section class="sample" id="sample">
-    <div class="wrap grid">
-      <div class="head">
-        <span class="pill">Sample report</span>
-        <h2>What you get, line by line.</h2>
-        <p>Each item shows what I found, where, the guidance it relates to, and wording you can use instead.</p>
-      </div>
-      <div>
-        <article class="entry card" aria-label="Sample report entry">
-          <header><span>Entry 7 of 22</span><span>Google search text</span></header>
-          <div class="b">
-            <p class="k">Found</p>
-            <p class="q">"Aesthetic treatment prices in [town]. <del>Botox from £185</del>, lip fillers from £285…"</p>
-            <p class="k">Guidance</p>
-            <p><a href="https://www.asa.org.uk/type/non_broadcast/code_section/12.html" target="_blank" rel="noopener">CAP Code rule 12.12</a></p>
-            <p class="k">Suggested wording</p>
-            <p class="q fix">"Aesthetic treatment prices in [town]. Lip fillers from £285, microneedling from £195. Consultations for lines and wrinkles."</p>
-          </div>
-        </article>
-        <p class="cap">From a practice review of a real clinic's public pages. Clinic not named.</p>
-      </div>
     </div>
   </section>
 
@@ -278,14 +245,14 @@ section { padding: 72px 0; }
     <div class="wrap">
       <div class="head-row">
         <div>
-          <span class="pill">How it works</span>
+          <span class="eyebrow">How it works</span>
           <h2>Three steps, all by email.</h2>
         </div>
       </div>
       <ol class="steps">
-        <li class="card"><h3>Email me</h3><p>Your clinic name and website. I reply with terms and a £295 invoice.</p></li>
-        <li class="card"><h3>I review</h3><p>Website, Google listing and Instagram, within 5 working days of payment.</p></li>
-        <li class="card"><h3>You get the report</h3><p>A PDF with every item and its new wording. Questions answered by email.</p></li>
+        <li><h3>Email me</h3><p>Your clinic name and website. I reply with terms and a £295 invoice.</p></li>
+        <li><h3>I review</h3><p>Website, Google listing and Instagram, within 5 working days of payment.</p></li>
+        <li><h3>You get the report</h3><p>A PDF with every item and its new wording. Questions answered by email.</p></li>
       </ol>
     </div>
   </section>
@@ -293,13 +260,13 @@ section { padding: 72px 0; }
   <section class="price" id="price">
     <div class="wrap grid">
       <div class="head">
-        <span class="pill">Price</span>
+        <span class="eyebrow">Price</span>
         <h2>One review, one fixed fee.</h2>
         <p>No retainer and no subscription. Pay once, get the report, keep it.</p>
       </div>
-      <div class="card">
+      <div class="box theme-dark">
         <div class="amt-big">£295<small>one-off</small></div>
-        <ul>
+        <ul class="ds-bullets">
           <li>Website pages</li>
           <li>Google Business Profile</li>
           <li>Instagram posts and bio</li>
@@ -317,7 +284,7 @@ section { padding: 72px 0; }
       <div class="card">
         <img src="img/john.jpg" alt="John Pantelopoulos" width="600" height="660">
         <div class="txt">
-          <span class="pill">About</span>
+          <span class="eyebrow">About</span>
           <h2>Hi, I'm John.</h2>
           <p>I review aesthetic clinic advertising against the published rules on prescription-only medicines. It's the only thing I do. I work on my own, by email, from Australia, so your report is often waiting when you start your day.</p>
           <p class="id">Sole trader, ABN 29 480 868 567. Not affiliated with the ASA, CAP or the MHRA.</p>
@@ -330,7 +297,7 @@ section { padding: 72px 0; }
     <div class="wrap">
       <div class="head-row">
         <div>
-          <span class="pill">Questions</span>
+          <span class="eyebrow">Questions</span>
           <h2>Before you book.</h2>
         </div>
       </div>
@@ -345,16 +312,17 @@ section { padding: 72px 0; }
 
   <section class="close">
     <div class="wrap">
-      <div class="panel">
+      <div class="panel theme-dark ds-pattern">
+        <span class="eyebrow">Get started</span>
         <h2>Want your clinic's advertising reviewed?</h2>
         <p>Email your clinic name and website. I reply within one working day.</p>
-        <a class="btn light" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
+        <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="foot">
+<footer class="foot theme-dark" style="background: var(--navy-950)">
   <div class="wrap">
     <div class="cols">
       <p>Advertising reviews for UK aesthetic clinics: website, Google listing and Instagram, with replacement wording. By email, from Australia.</p>
@@ -366,8 +334,8 @@ section { padding: 72px 0; }
         <a href="terms.html">Terms of service</a>
       </nav>
     </div>
+    <div class="ds-divider" aria-hidden="true"></div>
     <div class="base">
-      <div class="mark">John Pantelopoulos</div>
       <p>© 2026 John Pantelopoulos, sole trader, ABN 29 480 868 567.</p>
     </div>
     <details id="privacy">

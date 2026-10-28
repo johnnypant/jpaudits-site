@@ -1,0 +1,76 @@
+/* John Pantelo design system: tokens.
+   Source: claude.ai/code/artifact/fc289feb-6f3c-4994-90c6-be395c6c1723 (project/tokens.json, v1).
+   Every page links this file. Pages use these variables only; no new hex values. */
+
+:root {
+  /* palette */
+  --navy-950: #0a1d40;
+  --navy-900: #0f2a5c;
+  --navy-800: #15306a;
+  --logo-blue: #000080; /* logo only */
+  --logo-ink: #00002d;  /* logo only */
+  --gold-500: #c9a24e;
+  --gold-700: #84651f;
+  --cream-50: #f5f1e8;
+  --cream-200: #ebe4d4;
+  --slate-600: #4b5875;
+
+  /* themed: light (cream) is the default page theme */
+  --surface: var(--cream-50);
+  --surface-alt: var(--cream-200);
+  --ink: var(--navy-900);
+  --ink-muted: var(--slate-600);
+  --accent: var(--gold-700);
+  --ornament: var(--gold-500);
+  --block: var(--navy-900);
+
+  /* type */
+  --font-display: Sora, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: Poppins, "Helvetica Neue", Arial, sans-serif;
+
+  /* spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-24: 96px;
+
+  /* radius and lines */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --line-hairline: 1px;
+  --line-frame: 3px;
+
+  color-scheme: light;
+}
+
+/* dark (navy) theme: apply to navy bands (hero, call to action, footer) */
+.theme-dark {
+  --surface: var(--navy-900);
+  --surface-alt: var(--navy-950);
+  --ink: var(--cream-50);
+  --ink-muted: #b9c2d6; /* tokens.json ink-muted, dark */
+  --accent: var(--gold-500);
+  --ornament: var(--gold-500);
+  --block: var(--cream-50);
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
+/* type styles */
+.t-display { font: 800 60px/64px var(--font-display); letter-spacing: -0.03em; }
+.t-h1      { font: 700 42px/48px var(--font-display); letter-spacing: -0.02em; }
+.t-h2      { font: 700 28px/36px var(--font-display); letter-spacing: -0.01em; }
+.t-eyebrow { font: 600 12px/16px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+.t-body    { font: 400 16px/26px var(--font-sans); }
+.t-small   { font: 400 14px/22px var(--font-sans); }
+
+/* graphics (paths relative to this file) */
+.ds-step-strip { height: 24px; background: url("step-strip-gold.svg") repeat-x left center; }
+.ds-divider { max-width: 600px; height: 48px; margin: var(--space-8) auto; background: url("divider-navy.svg") center / contain no-repeat; }
+.theme-dark .ds-divider { background-image: url("divider-gold.svg"); }
+.ds-pattern { background: var(--navy-900) url("pattern-navy.svg") repeat; }
+.ds-bullets { list-style: none; padding-left: 0; }
+.ds-bullets li { padding-left: 26px; background: url("bullet-gold.svg") left 0.35em / 16px 15px no-repeat; }

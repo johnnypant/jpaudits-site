@@ -74,10 +74,54 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
 
 /* what's checked */
 .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); list-style: none; margin: 0; padding: 0; }
-.tiles li { padding: var(--space-8) var(--space-6); background: var(--surface-alt); }
+.tile { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; width: 100%; text-align: left; font: inherit; color: var(--ink); border: 0; border-radius: var(--radius-none); cursor: pointer; padding: var(--space-8) var(--space-6); background: var(--surface-alt); }
+.tile h3 { color: var(--ink); }
+.tile:hover:not(.theme-dark) { outline: var(--line-hairline) solid var(--ink); outline-offset: -1px; }
+.tile:focus-visible { outline: 2px solid var(--ornament); outline-offset: 3px; }
 .tiles svg { width: 40px; height: 40px; color: var(--ink); margin-bottom: 18px; }
-.tiles li.theme-dark { background: var(--surface); }
-.tiles li.theme-dark svg { color: var(--accent); }
+.tile.theme-dark { background: var(--surface); }
+.tile.theme-dark svg { color: var(--accent); }
+.tile .see { display: inline-block; margin-top: var(--space-4); font-size: 13px; font-weight: 500; color: var(--accent); border-bottom: var(--line-hairline) solid currentColor; }
+.tile .showing { display: none; margin-top: var(--space-4); font-size: 13px; font-weight: 500; color: var(--accent); }
+.tile.theme-dark .see { display: none; }
+.tile.theme-dark .showing { display: inline-block; }
+/* example panel */
+.demo { scroll-margin-top: 88px; margin-top: var(--space-6); background: var(--surface-alt); padding: var(--space-12); }
+.ex { display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--space-12); align-items: center; padding: 0; }
+.ex[hidden] { display: none; }
+.shot { margin: 0; }
+.shot figcaption { font-size: 12px; color: var(--ink-muted); margin-top: var(--space-2); }
+.shot mark { background: none; color: inherit; outline: 2px solid var(--gold-500); outline-offset: 1px; }
+.browser, .listing, .post, .rep { background: var(--cream-50); border: var(--line-hairline) solid var(--slate-600); font-size: 14px; line-height: 22px; color: var(--navy-900); }
+.browser .bar { display: flex; align-items: center; gap: 6px; padding: 10px var(--space-4); background: var(--cream-50); border-bottom: var(--line-hairline) solid var(--cream-200); }
+.browser .bar i { width: 9px; height: 9px; background: var(--slate-600); opacity: .35; border-radius: 50%; }
+.browser .bar span { margin-left: var(--space-2); font-size: 12px; color: var(--slate-600); }
+.browser .page { padding: var(--space-6); }
+.ph { display: block; font: 700 18px/24px var(--font-display); margin-bottom: 12px; }
+.row { display: flex; justify-content: space-between; padding: 10px 0; border-top: var(--line-hairline) solid var(--cream-200); }
+.listing { padding: var(--space-6); }
+.ln { display: block; font: 700 20px/26px var(--font-display); }
+.lm { font-size: 13px; color: var(--slate-600); }
+.lk { font: 600 12px/16px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-600); margin: 18px 0 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.chips span { padding: 4px 12px; border: var(--line-hairline) solid var(--cream-200); background: var(--surface); }
+.post { max-width: 360px; }
+.ph2 { padding: 10px var(--space-4); font-size: 13px; }
+.post .img { aspect-ratio: 1 / 0.6; display: grid; place-items: center; background: var(--navy-900); color: var(--cream-50); text-align: center; font: 800 26px/32px var(--font-display); }
+.post .img mark { outline-color: var(--gold-500); }
+.post p { padding: 12px var(--space-4); font-size: 13px; line-height: 20px; }
+.rh { display: flex; justify-content: space-between; padding: 12px var(--space-6); background: var(--cream-200); font-size: 13px; font-weight: 500; }
+.rh span:last-child { color: var(--slate-600); }
+.rb { padding: var(--space-6); }
+.rk { font: 600 12px/16px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-700); margin: 16px 0 4px; }
+.rk:first-child { margin-top: 0; }
+.rb del { text-decoration-thickness: 2px; color: var(--slate-600); }
+.rf { background: var(--cream-200); padding: 12px var(--space-4); }
+.why h3 { font: 700 24px/32px var(--font-display); letter-spacing: -0.01em; color: var(--ink); margin: 0 0 12px; }
+.why p { color: var(--ink-muted); }
+.why a { color: var(--accent); }
+.fixbox { margin-top: var(--space-6); padding: var(--space-4) var(--space-6); background: var(--surface); border-left: var(--line-frame) solid var(--ornament); }
+.fixbox b { display: block; font: 600 12px/16px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
 .tiles p { font-size: 14px; line-height: 22px; color: var(--ink-muted); margin-top: 10px; }
 
 /* how it works */
@@ -138,6 +182,7 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
 
 @media (max-width: 1000px) {
   .tiles { grid-template-columns: repeat(2, 1fr); }
+  .ex { grid-template-columns: 1fr; gap: var(--space-8); }
   .price .grid { grid-template-columns: 1fr 400px; gap: 40px; }
 }
 @media (max-width: 860px) {
@@ -168,7 +213,13 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
   .foot nav { margin-top: 28px; }
 }
 @media (max-width: 520px) {
-  .tiles { grid-template-columns: 1fr; gap: var(--space-4); }
+  .tiles { grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
+  .tile { padding: var(--space-4); }
+  .tile p { display: none; }
+  .tile .see, .tile .showing { margin-top: var(--space-2); }
+  .tiles svg { width: 28px; height: 28px; margin-bottom: 10px; }
+  .demo { padding: var(--space-6) var(--space-4); }
+  .why h3 { font-size: 20px; line-height: 28px; }
   .hero .cta .btn { width: 100%; }
   .entry header, .entry .b { padding-left: 18px; padding-right: 18px; }
 }
@@ -233,14 +284,77 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
           <span class="eyebrow">What I check</span>
           <h2>Everything a patient sees before they book.</h2>
         </div>
-        <p>Three places patients find you, and new wording for every line I flag.</p>
+        <p>Three places patients find you, and new wording for every line I flag. Click a box to see an example.</p>
       </div>
-      <ul class="tiles">
-        <li class="theme-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="15"/><path d="M3 8h18"/></svg><h3>Website pages</h3><p>Treatment pages, price lists, offers and blog posts.</p></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><h3>Google Business Profile</h3><p>Your description, services, posts and the text Google shows in search.</p></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg><h3>Instagram</h3><p>Your bio, highlights and recent posts.</p></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h3>Replacement wording</h3><p>Every flagged line quoted, with the rule it relates to and new copy to use.</p></li>
-      </ul>
+      <div class="tiles" role="tablist" aria-label="What I check">
+        <button type="button" class="tile theme-dark" role="tab" id="tab-web" aria-controls="ex-web" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="15"/><path d="M3 8h18"/></svg><h3>Website pages</h3><p>Treatment pages, price lists, offers and blog posts.</p><span class="see">See an example</span><span class="showing">Example shown below</span></button>
+        <button type="button" class="tile" role="tab" id="tab-gbp" aria-controls="ex-gbp" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><h3>Google Business Profile</h3><p>Your description, services, posts and the text Google shows in search.</p><span class="see">See an example</span><span class="showing">Example shown below</span></button>
+        <button type="button" class="tile" role="tab" id="tab-ig" aria-controls="ex-ig" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg><h3>Instagram</h3><p>Your bio, highlights and recent posts.</p><span class="see">See an example</span><span class="showing">Example shown below</span></button>
+        <button type="button" class="tile" role="tab" id="tab-fix" aria-controls="ex-fix" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h3>Replacement wording</h3><p>Every flagged line quoted, with the rule it relates to and new copy to use.</p><span class="see">See an example</span><span class="showing">Example shown below</span></button>
+      </div>
+      <div class="demo">
+        <section class="ex" id="ex-web" role="tabpanel" aria-labelledby="tab-web">
+          <figure class="shot">
+            <div class="browser"><div class="bar"><i></i><i></i><i></i><span>exampleclinic.co.uk/prices</span></div>
+              <div class="page"><b class="ph">Treatment prices</b>
+                <div class="row"><span><mark>Botox</mark>, one area</span><span>£180</span></div>
+                <div class="row"><span><mark>Botox</mark>, three areas</span><span>£280</span></div>
+                <div class="row"><span>Lip filler, 1ml</span><span>£250</span></div>
+                <div class="row"><span>Skin consultation</span><span>Free</span></div>
+              </div></div>
+            <figcaption>Illustration. Not a real clinic.</figcaption>
+          </figure>
+          <div class="why">
+            <span class="eyebrow">Why it's flagged</span>
+            <h3>The price list names a prescription-only medicine.</h3>
+            <p>Botox is the brand name of a prescription-only medicine. <a href="https://www.asa.org.uk/type/non_broadcast/code_section/12.html" target="_blank" rel="noopener">CAP Code rule 12.12</a> says these can't be advertised to the public, and the ASA's guidance counts naming one on a price list as advertising it.</p>
+            <div class="fixbox"><b>Wording I'd suggest</b>"Anti-wrinkle consultation and treatment, one area: £180."</div>
+          </div>
+        </section>
+        <section class="ex" id="ex-gbp" role="tabpanel" aria-labelledby="tab-gbp" hidden>
+          <figure class="shot">
+            <div class="listing"><b class="ln">Example Aesthetics</b><span class="lm">4.9 (212 reviews) · Aesthetics clinic in [town]</span>
+              <div class="lk">Services</div><div class="chips"><span><mark>Botox</mark></span><span>Lip filler</span><span>Skin peels</span></div>
+              <div class="lk">From the business</div><p>"Specialists in <mark>Botox</mark> and dermal fillers. Book your <mark>Botox</mark> appointment today."</p></div>
+            <figcaption>Illustration. Not a real clinic.</figcaption>
+          </figure>
+          <div class="why">
+            <span class="eyebrow">Why it's flagged</span>
+            <h3>Your Google listing is advertising too.</h3>
+            <p>A service called "Botox", or a description that names it, is shown to anyone who searches. The same rule applies there as on your website: <a href="https://www.asa.org.uk/type/non_broadcast/code_section/12.html" target="_blank" rel="noopener">CAP Code rule 12.12</a>.</p>
+            <div class="fixbox"><b>Wording I'd suggest</b>Rename the service "Anti-wrinkle consultation" and describe the treatment, not the medicine.</div>
+          </div>
+        </section>
+        <section class="ex" id="ex-ig" role="tabpanel" aria-labelledby="tab-ig" hidden>
+          <figure class="shot">
+            <div class="post"><div class="ph2"><b>@exampleaesthetics</b></div>
+              <div class="img"><span>20% off <mark>Botox</mark><br>this month</span></div>
+              <p><b>exampleaesthetics</b> Treat yourself before Christmas. 20% off all <mark>Botox</mark> treatments, this month only. Link in bio to book.</p></div>
+            <figcaption>Illustration. Not a real clinic.</figcaption>
+          </figure>
+          <div class="why">
+            <span class="eyebrow">Why it's flagged</span>
+            <h3>A discount on a prescription-only medicine.</h3>
+            <p>Posts, captions and bios are all ads under the ASA's rules. Promoting a prescription-only medicine, and especially offering money off it, is what <a href="https://www.asa.org.uk/type/non_broadcast/code_section/12.html" target="_blank" rel="noopener">CAP Code rule 12.12</a> covers.</p>
+            <div class="fixbox"><b>Wording I'd suggest</b>"Book a consultation this month to talk through treatments for lines and wrinkles."</div>
+          </div>
+        </section>
+        <section class="ex" id="ex-fix" role="tabpanel" aria-labelledby="tab-fix" hidden>
+          <figure class="shot">
+            <div class="rep"><div class="rh"><span>Entry 3 of 22</span><span>Instagram post</span></div>
+              <div class="rb"><div class="rk">Found</div><p>"20% off all <del>Botox</del> treatments, this month only."</p>
+              <div class="rk">Guidance</div><p>CAP Code rule 12.12</p>
+              <div class="rk">Suggested wording</div><p class="rf">"Book a consultation this month to talk through treatments for lines and wrinkles."</p></div></div>
+            <figcaption>One entry from a sample report.</figcaption>
+          </figure>
+          <div class="why">
+            <span class="eyebrow">What you get</span>
+            <h3>Every flagged line, with wording to paste in.</h3>
+            <p>The report quotes each line, says where it appears and links the rule it relates to. Then it gives you new wording that describes the consultation and the treatment rather than the medicine.</p>
+            <div class="fixbox"><b>How you use it</b>Copy the suggested wording onto your site, listing or post. It's your decision what to change.</div>
+          </div>
+        </section>
+      </div>
     </div>
   </section>
 
@@ -370,6 +484,18 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
   window.addEventListener('hashchange', openPrivacy); openPrivacy();
   var menu = document.querySelector('.menu');
   menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.open = false; }); });
+  var tabs = document.querySelectorAll('.tile');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (o) {
+        var on = o === t;
+        o.setAttribute('aria-selected', on ? 'true' : 'false');
+        o.classList.toggle('theme-dark', on);
+        document.getElementById(o.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (window.innerWidth < 860) document.querySelector('.demo').scrollIntoView({ block: 'start' });
+    });
+  });
 })();
 </script>
 </body></html>

@@ -52,6 +52,10 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
 .hero p.lead { margin: var(--space-6) 0 var(--space-8); font-size: 17px; line-height: 28px; max-width: 30em; }
 .hero .cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); }
 .hero .cta .btn { min-width: 200px; }
+.btn.ghost { background: transparent; color: var(--ink); outline: var(--line-hairline) solid var(--ornament); outline-offset: -1px; }
+.btn.ghost:hover { opacity: 1; outline-width: 2px; outline-offset: -2px; }
+.hero .cta .terms { flex-basis: 100%; }
+.hero .cap a { color: var(--accent); }
 .hero .terms { font-size: 14px; color: var(--ink-muted); }
 .who { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-8); padding-top: var(--space-6); border-top: var(--line-hairline) solid var(--ornament); }
 .who img { width: 104px; height: 104px; object-fit: cover; object-position: center 20%; }
@@ -230,13 +234,13 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
   <div class="top-bar"><div class="wrap">
     <a class="brand" href="#"><img src="public/brand/logo-lockup-transparent.png" alt="John Pantelo" width="1646" height="342"></a>
     <nav class="links" aria-label="Main">
-      <a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a>
+      <a href="sample-report.html">Sample report</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a>
       <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
     </nav>
     <details class="menu">
       <summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg></summary>
       <nav aria-label="Main">
-        <a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a><a href="#faq">Questions</a>
+        <a href="sample-report.html">Sample report</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a><a href="#faq">Questions</a>
       </nav>
     </details>
   </div></div>
@@ -252,6 +256,7 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
           <p class="lead">I check your website, Google listing and Instagram for prescription-medicine wording, then send you replacement copy you can paste straight in.</p>
           <div class="cta">
             <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
+            <a class="btn ghost" href="sample-report.html">View a sample report</a>
             <span class="terms">£295 fixed. Report within 5 working days.</span>
           </div>
           <div class="who">
@@ -271,7 +276,7 @@ section { padding: calc(var(--space-12) + var(--space-4)) 0; }
               <p class="q fix">"Aesthetic treatment prices in [town]. Lip fillers from £285, microneedling from £195. Consultations for lines and wrinkles."</p>
             </div>
           </article>
-          <p class="cap">One entry from a sample report, based on a real clinic's public pages. Clinic not named.</p>
+          <p class="cap">One entry from a sample report, based on a real clinic's public pages. Clinic not named. <a href="sample-report.html">See a full sample report</a></p>
         </div>
       </div>
     </div>

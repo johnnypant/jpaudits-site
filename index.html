@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="public/brand/tokens.css?v=24">
+<link rel="stylesheet" href="public/brand/tokens.css?v=25">
 <style>
 /* Layout only. Colours, fonts, spacing and graphics come from public/brand/tokens.css. */
 * { box-sizing: border-box; }
@@ -54,8 +54,8 @@ section { padding: var(--space-24) 0; }
 .hero .cta .btn { min-width: 200px; }
 .hero .terms { font-size: 14px; color: var(--ink-muted); }
 .who { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-8); padding-top: var(--space-6); border-top: var(--line-hairline) solid var(--ornament); }
-.who img { width: 56px; height: 56px; object-fit: cover; object-position: center 20%; }
-.who b { display: block; font-weight: 500; font-size: 15px; }
+.who img { width: 104px; height: 104px; object-fit: cover; object-position: center 20%; }
+.who b { display: block; font-weight: 500; font-size: 17px; margin-bottom: var(--space-1); }
 .who span { font-size: 14px; color: var(--ink-muted); }
 .hero .cap { font-size: 14px; line-height: 22px; color: var(--ink-muted); margin-top: 12px; }
 
@@ -91,8 +91,9 @@ section { padding: var(--space-24) 0; }
 .price .grid { display: grid; grid-template-columns: 1fr 440px; gap: 64px; align-items: center; }
 .price .head p { margin-top: 18px; max-width: 28em; color: var(--ink-muted); }
 .price .box { padding: 48px 44px; outline: var(--line-frame) solid var(--ornament); outline-offset: -14px; }
-.amt-big { font: 800 56px/1 var(--font-display); letter-spacing: -0.03em; color: var(--accent); }
-.amt-big small { font: 400 15px/1 var(--font-sans); letter-spacing: 0; color: var(--ink-muted); margin-left: var(--space-2); }
+.amt-label { display: block; margin-bottom: var(--space-2); }
+.amt-big { font: 800 96px/1 var(--font-display); letter-spacing: -0.04em; color: var(--accent); padding-bottom: var(--space-6); border-bottom: var(--line-hairline) solid var(--ornament); }
+.amt-big small { display: block; margin-top: var(--space-2); font: 500 16px/1.4 var(--font-sans); letter-spacing: 0; color: var(--ink); }
 .price ul { margin: var(--space-6) 0 var(--space-8); display: grid; gap: 12px; }
 .price .btn { width: 100%; }
 .price .g { font-size: 14px; line-height: 22px; margin-top: var(--space-6); padding-top: 18px; border-top: var(--line-hairline) solid var(--ornament); }
@@ -153,6 +154,8 @@ section { padding: var(--space-24) 0; }
   .head-row > p { text-align: left; margin-top: 14px; }
   .price .grid { grid-template-columns: 1fr; gap: var(--space-8); }
   .price .box { padding: 40px 30px; }
+  .amt-big { font-size: 72px; }
+  .who img { width: 80px; height: 80px; }
   .steps { grid-template-columns: 1fr; gap: var(--space-4); }
   .about .card { grid-template-columns: 1fr; }
   .about img { height: 280px; object-position: center 20%; }
@@ -176,13 +179,13 @@ section { padding: var(--space-24) 0; }
   <div class="top-bar"><div class="wrap">
     <a class="brand" href="#"><img src="public/brand/logo-lockup-transparent.png" alt="John Pantelo" width="1646" height="342"></a>
     <nav class="links" aria-label="Main">
-      <a href="#sample">Sample</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a>
+      <a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a>
       <a class="btn" href="mailto:john@jpaudits.co.uk?subject=Advertising%20review&amp;body=Clinic%20name%3A%0AWebsite%3A%0A">Book a review</a>
     </nav>
     <details class="menu">
       <summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg></summary>
       <nav aria-label="Main">
-        <a href="#sample">Sample report</a><a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a><a href="#faq">Questions</a>
+        <a href="#how">How it works</a><a href="#price">Price</a><a href="#about">About</a><a href="#faq">Questions</a>
       </nav>
     </details>
   </div></div>
@@ -265,7 +268,8 @@ section { padding: var(--space-24) 0; }
         <p>No retainer and no subscription. Pay once, get the report, keep it.</p>
       </div>
       <div class="box theme-dark">
-        <div class="amt-big">£295<small>one-off</small></div>
+        <span class="eyebrow amt-label">Fixed price</span>
+        <div class="amt-big">£295<small>One-off. No subscription.</small></div>
         <ul class="ds-bullets">
           <li>Website pages</li>
           <li>Google Business Profile</li>

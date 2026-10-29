@@ -47,8 +47,8 @@ section { padding: var(--space-24) 0; }
 .menu nav a { display: block; padding: 12px 20px; text-decoration: none; color: var(--ink); font-size: 15px; }
 
 /* hero */
-.hero { padding: var(--space-6) 0 var(--space-24); }
-.hero .panel { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; padding: 64px; background: var(--surface) url("public/brand/hero-navy.svg") right center / cover no-repeat; }
+.hero { padding: 0; margin-bottom: var(--space-24); background: var(--surface) url("public/brand/hero-navy.svg") right center / cover no-repeat; }
+.hero .panel { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; padding: var(--space-24) 0; }
 .hero p.lead { margin: var(--space-6) 0 var(--space-8); font-size: 17px; line-height: 28px; max-width: 30em; }
 .hero .cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); }
 .hero .cta .btn { min-width: 200px; }
@@ -145,8 +145,8 @@ section { padding: var(--space-24) 0; }
   .top .wrap { height: 72px; }
   .brand img { width: 160px; }
   section { padding: 56px 0; }
-  .hero { padding: var(--space-4) 0 56px; }
-  .hero .panel { grid-template-columns: 1fr; gap: 36px; padding: 36px 20px; }
+  .hero { padding: 0; margin-bottom: 56px; }
+  .hero .panel { grid-template-columns: 1fr; gap: 36px; padding: var(--space-12) 0; }
   h1 { font-size: 40px; line-height: 44px; }
   .hero p.lead { font-size: 16px; line-height: 26px; }
   .head-row { display: block; margin-bottom: var(--space-8); }
@@ -189,9 +189,9 @@ section { padding: var(--space-24) 0; }
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero theme-dark">
     <div class="wrap">
-      <div class="panel theme-dark">
+      <div class="panel">
         <div class="copy">
           <span class="eyebrow">For UK aesthetic clinics</span>
           <h1>Advertising reviews for <em>aesthetic clinics.</em></h1>

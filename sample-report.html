@@ -13,8 +13,7 @@
 <style>
 /* Layout only. Colours, fonts and spacing come from public/brand/tokens.css.
    Written to read like a document, not a dashboard: one column, few labels,
-   no tinted boxes. The only exception to the brand fonts is inside the
-   screenshots, which imitate the clinic's own site, Google and Instagram. */
+   no tinted boxes. Screenshots are images, made from mock pages in ../mocks/. */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--surface-alt); color: var(--ink); font: 400 16px/27px var(--font-sans); }
@@ -84,7 +83,13 @@ h2 { margin: var(--space-12) 0 var(--space-4); font: 700 22px/30px var(--font-di
 .words dd + dt { margin-top: var(--space-2); }
 .words dd.now + dd.now, .words dd.new + dd.new { margin-top: var(--space-2); }
 
-/* screenshots: imitate the real channel, annotated like a marked-up printout */
+/* screenshots: real browser captures of mock pages (see ../mocks/), marked up in gold */
+.snap { width: 100%; border: var(--line-hairline) solid var(--surface-alt); }
+figure.wide { grid-template-columns: 1fr; gap: var(--space-4); }
+figure.wide .notes { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-8); }
+figure.wide .notes li + li { margin-top: 0; }
+figure.wide .cap { margin-top: 0; }
+figure.phone { grid-template-columns: 280px 1fr; }
 figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: var(--space-6); align-items: start; }
 .notes { list-style: none; margin: 0; padding: 0; font-size: 13px; line-height: 20px; color: var(--ink-muted); }
 .notes li { display: grid; grid-template-columns: 26px 1fr; }
@@ -94,47 +99,6 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
 .hl { text-decoration: underline; text-decoration-color: var(--gold-500); text-decoration-thickness: 3px; text-underline-offset: 2px; text-decoration-skip-ink: none; }
 .cap { grid-column: 1 / -1; margin-top: calc(-1 * var(--space-4)); font-size: 12px; color: var(--ink-muted); }
 
-.shot { border: var(--line-hairline) solid var(--slate-600); background: var(--cream-50); color: var(--navy-900); overflow: hidden; break-inside: avoid; }
-.shot .url { display: flex; align-items: center; gap: 6px; padding: 7px 10px; background: var(--cream-200); font: 400 11px/14px Arial, Helvetica, sans-serif; color: var(--slate-600); }
-.shot .url::before { content: ""; width: 8px; height: 8px; border: 1px solid var(--slate-600); border-radius: 50%; }
-.shot .url span { flex: 1; padding: 3px 8px; background: var(--cream-50); border-radius: 10px; }
-/* the clinic's own site: a serif, spa-style template */
-.site { font-family: Georgia, "Times New Roman", serif; }
-.site nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; font: 11px/14px Arial, Helvetica, sans-serif; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid var(--cream-200); }
-.site nav b { font: italic 400 16px/1 Georgia, serif; letter-spacing: 0; text-transform: none; }
-.site .banner { padding: 26px 18px; text-align: center; background: var(--cream-200); }
-.site .banner big { display: block; font-size: 21px; line-height: 27px; }
-.site .banner small { display: block; margin-top: 6px; font: 12px/16px Arial, sans-serif; }
-.site .banner i { display: inline-block; margin-top: 12px; padding: 7px 16px; background: var(--navy-900); color: var(--cream-50); font: normal 11px/1 Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
-.site .row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 14px 16px 18px; font-size: 13px; line-height: 18px; }
-.site .row3 small { display: block; font: 11px/15px Arial, sans-serif; color: var(--slate-600); margin-top: 2px; }
-.site .body { padding: 16px 18px 18px; font-size: 14px; line-height: 21px; }
-.site .body big { display: block; margin-bottom: 6px; font-size: 20px; line-height: 26px; }
-.site table { width: 100%; margin-top: 10px; border-collapse: collapse; font: 12px/18px Arial, sans-serif; }
-.site td { padding: 5px 0; border-top: 1px solid var(--cream-200); }
-.site td:last-child { text-align: right; }
-.tabbar { display: flex; padding: 6px 10px 0; background: var(--cream-200); font: 11px/14px Arial, sans-serif; }
-.tabbar span { padding: 5px 12px; background: var(--cream-50); border-radius: 6px 6px 0 0; max-width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-/* search result and business listing */
-.serp { padding: 14px 16px; font: 13px/19px Arial, Helvetica, sans-serif; }
-.serp .q { padding: 7px 14px; margin-bottom: 14px; border: 1px solid var(--cream-200); border-radius: 18px; }
-.serp .u { font-size: 11px; color: var(--slate-600); }
-.serp .t { font-size: 17px; line-height: 23px; color: var(--navy-800); }
-.serp .kp { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--cream-200); }
-.serp .kp big { display: block; font-size: 17px; line-height: 22px; }
-.serp .svc { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--cream-200); }
-.serp .upd { margin-top: 10px; padding: 8px 10px; border: 1px solid var(--cream-200); border-radius: 8px; }
-.serp .upd small { display: block; font-size: 11px; color: var(--slate-600); }
-/* instagram post */
-.ig { max-width: 330px; font: 12px/17px -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
-.ig .top { display: flex; align-items: center; gap: 8px; padding: 9px 10px; font-weight: 600; }
-.ig .top i { width: 26px; height: 26px; border-radius: 50%; background: var(--cream-200); border: 2px solid var(--gold-500); }
-.ig .top small { margin-left: auto; font-weight: 400; color: var(--slate-600); }
-.ig .img { aspect-ratio: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; background: var(--cream-200); text-align: center; font-family: Georgia, serif; }
-.ig .img big { font-size: 34px; line-height: 38px; letter-spacing: .02em; }
-.ig .img small { font: 13px/18px Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
-.ig .capt { padding: 10px; }
-.ig .icons { padding: 8px 10px 0; letter-spacing: 8px; color: var(--slate-600); }
 
 /* closing sections */
 .plain { max-width: 36em; }
@@ -164,7 +128,6 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
   .words dd + dt { margin-top: var(--space-4); }
   figure { grid-template-columns: 1fr; gap: var(--space-4); }
   .cap { margin-top: 0; }
-  .site .row3 { grid-template-columns: 1fr; }
 }
 
 /* print: A4, attached to emails as a PDF */
@@ -185,8 +148,12 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
   figure, .words, .toc li, .src li { break-inside: avoid; }
   .pb { break-before: page; margin-top: 0; }
   #i1, #i2, #i3, #i4 { break-before: page; margin-top: 0; }
-  .shot { zoom: 0.82; }
-  figure { margin-top: 6mm; grid-template-columns: minmax(0, 1fr) 46mm; }
+  figure { margin-top: 6mm; }
+  figure.wide .snap { width: 58%; }
+  #i3 figure.wide .snap { width: 72%; }
+  figure.phone { grid-template-columns: 50mm 1fr; }
+  #i2 figure.phone { grid-template-columns: 40mm 1fr; margin-top: 4mm; }
+  .find > p, .words { font-size: 10pt; line-height: 15.5pt; }
   .words { margin-top: 5mm; }
   a { text-decoration: none; }
 }
@@ -252,15 +219,10 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
       <dd class="new">"Book a consultation for lip fillers, skin treatments, or lines and wrinkles. New clients save 20% on skin and filler treatments."</dd>
       <dd class="new">Tile: "Lines and wrinkles: talk to our nurse prescriber about the options that suit your face. Consultation £30."</dd>
     </dl>
-    <figure>
-      <div class="shot site" role="img" aria-label="Mock-up of the clinic homepage with Botox in the banner and the first treatment tile">
-        <div class="url"><span>larkmooraesthetics.example</span></div>
-        <nav><b>Larkmoor</b><span>Treatments · Prices · Book</span></nav>
-        <div class="banner"><big>Book your <span class="hl">Botox</span><em class="pin">a</em> and lip filler appointment today.</big><small>New clients save 20%</small><i>Book now</i></div>
-        <div class="row3"><div><span class="hl">Botox</span><em class="pin">b</em><small>from £160 · smooth away lines in 15 minutes</small></div><div>Lip filler<small>from £250</small></div><div>Skin peels<small>from £85</small></div></div>
-      </div>
+    <figure class="wide">
+      <img class="snap" src="img/sample/homepage.jpg" alt="Screenshot of the fictional clinic homepage. Botox is marked in the headline and on the first treatment card." width="1400" height="1429" loading="lazy">
       <ol class="notes"><li><span class="pin">a</span>Product name in the first line of the page.</li><li><span class="pin">b</span>Product name, price and a result claim, together.</li></ol>
-      <p class="cap">Mock-up of the fictional clinic's homepage.</p>
+      <p class="cap">Mock-up: the clinic is fictional. In a paid review this is a screenshot of your own page, taken on the capture date.</p>
     </figure>
   </section>
 
@@ -278,19 +240,10 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
       <dd class="new">Post: delete it. If you replace it, promote the consultation, not a product or a price.</dd>
       <dd class="new">Snippet: "Treatment prices in Larkmoor. Lip filler from £250, skin peels from £85, consultations from £30. Nurse prescriber led."</dd>
     </dl>
-    <figure>
-      <div class="shot serp" role="img" aria-label="Mock-up of a search result and business listing showing a Botox price and offer">
-        <div class="q">aesthetics clinic larkmoor</div>
-        <div class="u">larkmooraesthetics.example › prices</div>
-        <div class="t">Prices | Larkmoor Aesthetics</div>
-        <div>Treatment prices in Larkmoor. <span class="hl">Botox from £160</span><em class="pin">a</em>, lip filler from £250…</div>
-        <div class="kp"><big>Larkmoor Aesthetics</big><div class="u">4.9 ★ (212) · Aesthetics clinic</div>
-          <div class="svc"><span><span class="hl">Botox: 1 area</span><em class="pin">b</em></span><span>£160</span></div><div class="svc"><span>Lip filler 1ml</span><span>£250</span></div>
-          <div class="upd"><small>Update · 2 Aug</small><span class="hl">Baby Botox</span> August offer, just £130 this month only<em class="pin">c</em></div>
-        </div>
-      </div>
+    <figure class="phone">
+      <img class="snap" src="img/sample/google.jpg" alt="Screenshot of a phone search for the fictional clinic. The Botox price in the result, the Botox service and an offer post are marked." width="780" height="1800" loading="lazy">
       <ol class="notes"><li><span class="pin">a</span>Snippet comes from the /prices/ meta description. You control it.</li><li><span class="pin">b</span>Service name and price.</li><li><span class="pin">c</span>Time-limited offer on a medicine.</li></ol>
-      <p class="cap">Mock-up of the fictional clinic's search result and listing.</p>
+      <p class="cap">Mock-up of a phone search for the fictional clinic.</p>
     </figure>
   </section>
 
@@ -307,15 +260,9 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
       <dd class="new">"If a prescription treatment is suitable, your prescriber will explain it, including risks and alternatives."</dd>
       <dd class="new">New address /lines-and-wrinkles/, with a 301 redirect from the old one so links and search results still work.</dd>
     </dl>
-    <figure>
-      <div class="shot site" role="img" aria-label="Mock-up of the Botox Larkmoor treatment page with a price table">
-        <div class="tabbar"><span><span class="hl">Botox Larkmoor</span> | Best Anti-Wrinkle Injections</span></div>
-        <div class="url"><span>larkmooraesthetics.example/<span class="hl">botox-larkmoor</span>/</span></div>
-        <div class="body"><big>Why choose us for your <span class="hl">Botox</span>?<em class="pin">a</em></big>We're Larkmoor's most trusted injectors.
-          <table><tr><td><span class="hl">Anti-wrinkle injections</span>, 1 area<em class="pin">b</em></td><td>£160</td></tr><tr><td>2 areas</td><td>£210</td></tr><tr><td>3 areas</td><td>£250</td></tr></table>
-        </div>
-      </div>
-      <ol class="notes"><li><span class="pin">a</span>Product name in the page title, address and heading.</li><li><span class="pin">b</span>Prices beside "anti-wrinkle injections".</li></ol>
+    <figure class="wide">
+      <img class="snap" src="img/sample/treatment-page.jpg" alt="Screenshot of the fictional clinic page called Botox Larkmoor, with the tab title, heading and anti-wrinkle price marked." width="1400" height="817" loading="lazy">
+      <ol class="notes"><li><span class="pin">a</span>Product name in the page title, which is also what Google shows. The address repeats it.</li><li><span class="pin">b</span>Product name in the main heading.</li><li><span class="pin">c</span>Prices beside "anti-wrinkle injections".</li></ol>
       <p class="cap">Mock-up of the fictional clinic's treatment page.</p>
     </figure>
   </section>
@@ -332,14 +279,9 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
       <dd class="new">"Thinking about lines and wrinkles? Book a consultation with our nurse prescriber to talk through your options. Link in bio."</dd>
       <dd class="new">Hashtags: #larkmoor #aestheticsclinic #skinconsultation</dd>
     </dl>
-    <figure>
-      <div class="shot ig" role="img" aria-label="Mock-up of a social media post advertising a Botox offer">
-        <div class="top"><i></i>larkmoor.aesthetics<small>Pinned</small></div>
-        <div class="img"><big>AUGUST<br>OFFER</big><small>3 areas · £199<em class="pin">a</em></small></div>
-        <div class="icons">♡ ○ ▷</div>
-        <div class="capt"><b>larkmoor.aesthetics</b> August offer 💉 3 areas of <span class="hl">Botox</span> for £199. Limited slots, DM to book! <span class="hl">#botox #babybotox</span><em class="pin">b</em> #larkmoor</div>
-      </div>
-      <ol class="notes"><li><span class="pin">a</span>Price and offer on the image itself.</li><li><span class="pin">b</span>Product name in the caption and hashtags.</li></ol>
+    <figure class="phone">
+      <img class="snap" src="img/sample/instagram.jpg" alt="Screenshot of the fictional clinic Instagram post advertising an August offer, with the offer, the word Botox and hashtags marked." width="780" height="1380" loading="lazy">
+      <ol class="notes"><li><span class="pin">a</span>Price and offer on the image itself.</li><li><span class="pin">b</span>Product name in the caption.</li><li><span class="pin">c</span>Product-name hashtags.</li></ol>
       <p class="cap">Mock-up of the fictional clinic's post.</p>
     </figure>
   </section>

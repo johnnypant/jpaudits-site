@@ -1,78 +1,58 @@
-/* John Pantelo design system: tokens.
-   Source: claude.ai/code/artifact/fc289feb-6f3c-4994-90c6-be395c6c1723 (project/tokens.json, v1).
-   Every page links this file. Pages use these variables only; no new hex values. */
+/* JP AUDITS design tokens, v3 (2026-11-13).
+   Colours from the John Pantelo logo kit (public/brand/v2/README.txt); choice and evidence:
+   raw/injectorguard/research/palette-2026-11-13/EVIDENCE.md. Same values as the home page's :root
+   (src/layouts/Base.astro). Documents (sample report, terms) link this file; v1 variable names kept. */
 
 :root {
-  /* palette */
-  --navy-950: #0a1d40;
-  --navy-900: #0f2a5c;
-  --navy-800: #15306a;
-  --logo-blue: #000080; /* logo only */
-  --logo-ink: #00002d;  /* logo only */
-  --gold-500: #dbb45a; /* brightened from design system #c9a24e at owner request, 2026-10-29 */
-  --gold-700: #84651f;
-  --cream-50: #f5f1e8;
-  --cream-200: #ebe4d4;
-  --slate-600: #4b5875;
+  /* palette: logo kit */
+  --white: #ffffff;
+  --navy-800: #000080;     /* kit navy: actions, links, accent text. 16:1 on white */
+  --ink-900: #0b1033;      /* kit ink: text, the inverse band. 18.5:1 on white */
+  --slate-600: #5b627c;    /* muted text, from start.mjs brand */
+  --lavender-500: #7b7bd6; /* kit lavender: rules and small marks only, never text on white (3.7:1) */
+  --lavender-300: #b9b9e6; /* kit soft lavender: accent on the ink band only (9.8:1) */
+  --lavender-100: #e6e6f2; /* kit pale lavender: background tint */
+  --orange-500: #f7941d;   /* mark-up on screenshots only (ANSI/ISO "warning", not "danger") */
 
-  /* themed: light (cream) is the default page theme */
-  --surface: var(--cream-50);
-  --surface-alt: var(--cream-200);
-  --ink: var(--navy-900);
+  /* v1 names */
+  --surface: var(--white);
+  --surface-alt: var(--lavender-100);
+  --ink: var(--ink-900);
   --ink-muted: var(--slate-600);
-  --accent: var(--gold-700);
-  --ornament: var(--gold-500);
-  --block: var(--navy-900);
+  --accent: var(--navy-800);
+  --ornament: var(--lavender-500);
+  --block: var(--navy-800);
 
-  /* type */
-  --font-display: Sora, "Helvetica Neue", Arial, sans-serif;
-  --font-sans: Poppins, "Helvetica Neue", Arial, sans-serif;
+  /* type: Literata (display, 400) and Figtree (text, 400/500) */
+  --font-display: "Literata", Georgia, serif;
+  --font-sans: "Figtree", system-ui, sans-serif;
 
-  /* spacing */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-12: 48px;
-  --space-24: 96px;
+  --space-1: 4px; --space-2: 8px; --space-4: 16px; --space-6: 24px;
+  --space-8: 32px; --space-12: 48px; --space-24: 96px;
 
-  /* radius and lines */
-  --radius-none: 0;
-  --radius-sm: 2px;
-  --line-hairline: 1px;
-  --line-frame: 3px;
+  --radius-none: 0; --radius-sm: 8px; --radius-lg: 20px;
+  --line-hairline: 1px; --line-frame: 3px;
 
   color-scheme: light;
 }
 
-/* dark (navy) theme: apply to navy bands (hero, call to action, footer) */
+/* inverse band */
 .theme-dark {
-  --surface: var(--navy-900);
-  --surface-alt: var(--navy-950);
-  --ink: var(--cream-50);
-  --ink-muted: #b9c2d6; /* tokens.json ink-muted, dark */
-  --accent: var(--gold-500);
-  --ornament: var(--gold-500);
-  --block: var(--cream-50);
+  --surface: var(--ink-900);
+  --surface-alt: #171e40;
+  --ink: var(--white);
+  --ink-muted: #979cad;
+  --accent: var(--lavender-300);
+  --ornament: var(--lavender-300);
+  --block: var(--white);
   background-color: var(--surface);
   color: var(--ink);
 }
 
-/* type styles */
-.t-display { font: 800 60px/64px var(--font-display); letter-spacing: -0.03em; }
-.t-h1      { font: 700 42px/48px var(--font-display); letter-spacing: -0.02em; }
-.t-h2      { font: 700 28px/36px var(--font-display); letter-spacing: -0.01em; }
-.t-eyebrow { font: 600 12px/16px var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+/* type styles: headlines at 400, tight tracking; labels in sentence case */
+.t-display { font: 400 60px/64px var(--font-display); letter-spacing: -0.026em; }
+.t-h1      { font: 400 42px/48px var(--font-display); letter-spacing: -0.02em; }
+.t-h2      { font: 400 28px/36px var(--font-display); letter-spacing: -0.01em; }
+.t-eyebrow { font: 500 13px/16px var(--font-sans); color: var(--ink-muted); }
 .t-body    { font: 400 16px/26px var(--font-sans); }
 .t-small   { font: 400 14px/22px var(--font-sans); }
-
-/* graphics (paths relative to this file) */
-/* step strip: solid above the gold line, transparent below it */
-.ds-step-strip { position: relative; isolation: isolate; height: 24px; background: url("step-strip-gold.svg") repeat-x left center; }
-.ds-step-strip::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--surface); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 24'%3E%3Cpath d='M0,0H48V20H36V4H12V20H0Z'/%3E%3C/svg%3E") repeat-x left center / 48px 24px; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 24'%3E%3Cpath d='M0,0H48V20H36V4H12V20H0Z'/%3E%3C/svg%3E") repeat-x left center / 48px 24px; }
-.ds-divider { max-width: 600px; height: 48px; margin: var(--space-8) auto; background: url("divider-navy.svg") center / contain no-repeat; }
-.theme-dark .ds-divider { background-image: url("divider-gold.svg"); }
-.ds-pattern { background: var(--navy-900) url("pattern-navy.svg") repeat; }
-.ds-bullets { list-style: none; padding-left: 0; }
-.ds-bullets li { padding-left: 26px; background: url("bullet-gold.svg") left 0.35em / 16px 15px no-repeat; }

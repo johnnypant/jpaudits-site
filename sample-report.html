@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sample Advertising Review</title>
 <meta name="description" content="A full sample advertising review for a fictional UK aesthetic clinic: website, Google listing and Instagram checked for prescription-medicine wording, with replacement copy.">
-<link rel="icon" type="image/png" href="public/brand/logo-mark.png">
+<link rel="icon" href="public/brand/v2/favicon.ico" sizes="any">
+<link rel="icon" href="public/brand/v2/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..700&family=Figtree:wght@400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="public/brand/tokens.css">
 <style>
 /* Layout only. Colours, fonts and spacing come from public/brand/tokens.css.
@@ -24,7 +25,7 @@ h1, h2, h3 { margin: 0; color: var(--ink); }
 p { margin: 0; }
 p + p { margin-top: var(--space-4); }
 [id] { scroll-margin-top: 24px; }
-sup { font-size: 10px; line-height: 0; font-weight: 600; color: var(--accent); }
+sup { font-size: 10px; line-height: 0; font-weight: 500; color: var(--accent); }
 sup a { text-decoration: none; }
 
 /* site bar (screen only) */
@@ -42,21 +43,21 @@ sup a { text-decoration: none; }
 .head { display: flex; justify-content: space-between; align-items: end; gap: var(--space-6); padding-bottom: var(--space-4); border-bottom: var(--line-hairline) solid var(--ink); font-size: 13px; line-height: 20px; color: var(--ink-muted); }
 .head img { width: 150px; }
 .head p { text-align: right; }
-h1 { margin-top: var(--space-12); font: 700 32px/40px var(--font-display); letter-spacing: -0.02em; }
+h1 { margin-top: var(--space-12); font: 400 32px/40px var(--font-display); letter-spacing: -0.02em; }
 .meta { margin: var(--space-4) 0 0; font-size: 14px; line-height: 23px; color: var(--ink-muted); }
 .meta b { font-weight: 500; color: var(--ink); }
 
 /* cover letter */
 .letter { margin-top: var(--space-12); max-width: 36em; }
 .letter .sig { margin-top: var(--space-6); }
-.letter .sig b { display: block; font: 700 18px/24px var(--font-display); }
+.letter .sig b { display: block; font: 400 18px/24px var(--font-display); }
 .letter .sig span { font-size: 14px; color: var(--ink-muted); }
 
 /* contents */
-h2 { margin: var(--space-12) 0 var(--space-4); font: 700 22px/30px var(--font-display); letter-spacing: -0.01em; }
+h2 { margin: var(--space-12) 0 var(--space-4); font: 400 22px/30px var(--font-display); letter-spacing: -0.01em; }
 .toc { list-style: none; margin: 0; padding: 0; border-top: var(--line-hairline) solid var(--surface-alt); }
 .toc li { display: grid; grid-template-columns: 32px 1fr auto; gap: var(--space-2); padding: 7px 0; border-bottom: var(--line-hairline) solid var(--surface-alt); font-size: 15px; line-height: 23px; }
-.toc li > span:first-child { font-weight: 600; color: var(--accent); }
+.toc li > span:first-child { font-weight: 500; color: var(--accent); }
 .toc li > span:last-child { font-size: 13px; color: var(--ink-muted); }
 .toc a { text-decoration: none; }
 .toc a:hover { text-decoration: underline; }
@@ -65,7 +66,7 @@ h2 { margin: var(--space-12) 0 var(--space-4); font: 700 22px/30px var(--font-di
 
 /* findings */
 .find { margin-top: var(--space-12); padding-top: var(--space-6); border-top: var(--line-hairline) solid var(--ink); }
-.find h3 { display: grid; grid-template-columns: 40px 1fr; font: 700 20px/28px var(--font-display); letter-spacing: -0.01em; }
+.find h3 { display: grid; grid-template-columns: 40px 1fr; font: 400 20px/28px var(--font-display); letter-spacing: -0.01em; }
 .find h3 span { color: var(--accent); }
 .where { margin: 4px 0 var(--space-4) 40px; font-size: 13px; line-height: 20px; color: var(--ink-muted); }
 .find > p, .find > .words, .find > figure { margin-left: 40px; }
@@ -73,7 +74,7 @@ h2 { margin: var(--space-12) 0 var(--space-4); font: 700 22px/30px var(--font-di
 
 /* current and suggested wording: hanging labels, no boxes */
 .words { margin-top: var(--space-6); display: grid; grid-template-columns: 96px 1fr; gap: var(--space-2) var(--space-4); font-size: 15px; line-height: 24px; }
-.words dt { padding-top: 2px; font-size: 12px; line-height: 20px; font-weight: 600; color: var(--ink-muted); }
+.words dt { padding-top: 2px; font-size: 12px; line-height: 20px; font-weight: 500; color: var(--ink-muted); }
 .words dt.s { color: var(--accent); }
 .words dt { grid-column: 1; }
 .words dd { margin: 0; grid-column: 2; }
@@ -83,7 +84,7 @@ h2 { margin: var(--space-12) 0 var(--space-4); font: 700 22px/30px var(--font-di
 .words dd + dt { margin-top: var(--space-2); }
 .words dd.now + dd.now, .words dd.new + dd.new { margin-top: var(--space-2); }
 
-/* screenshots: real browser captures of mock pages (see ../mocks/), marked up in gold */
+/* screenshots: real browser captures of mock pages (see ../mocks/), marked up in orange */
 .snap { width: 100%; border: var(--line-hairline) solid var(--surface-alt); }
 figure.wide { grid-template-columns: 1fr; gap: var(--space-4); }
 figure.wide .notes { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-8); }
@@ -94,9 +95,9 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
 .notes { list-style: none; margin: 0; padding: 0; font-size: 13px; line-height: 20px; color: var(--ink-muted); }
 .notes li { display: grid; grid-template-columns: 26px 1fr; }
 .notes li + li { margin-top: var(--space-2); }
-.pin { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--gold-500); color: var(--navy-900); font: 700 11px/1 var(--font-sans); font-style: normal; vertical-align: 2px; margin-left: 3px; }
+.pin { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--orange-500); color: var(--navy-900); font: 500 11px/1 var(--font-sans); font-style: normal; vertical-align: 2px; margin-left: 3px; }
 .notes .pin { margin: 1px 0 0; }
-.hl { text-decoration: underline; text-decoration-color: var(--gold-500); text-decoration-thickness: 3px; text-underline-offset: 2px; text-decoration-skip-ink: none; }
+.hl { text-decoration: underline; text-decoration-color: var(--orange-500); text-decoration-thickness: 3px; text-underline-offset: 2px; text-decoration-skip-ink: none; }
 .cap { grid-column: 1 / -1; margin-top: calc(-1 * var(--space-4)); font-size: 12px; color: var(--ink-muted); }
 
 
@@ -106,7 +107,7 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
 .plain li + li { margin-top: var(--space-2); }
 .src { margin: 0; padding: 0; list-style: none; counter-reset: s; font-size: 14px; line-height: 22px; }
 .src li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; padding: 10px 0; border-bottom: var(--line-hairline) solid var(--surface-alt); }
-.src li::before { content: counter(s); font-weight: 600; color: var(--accent); }
+.src li::before { content: counter(s); font-weight: 500; color: var(--accent); }
 .src q { quotes: none; display: block; margin-top: 2px; color: var(--ink-muted); }
 .end { margin-top: var(--space-12); padding-top: var(--space-4); border-top: var(--line-hairline) solid var(--ink); display: flex; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; font-size: 13px; line-height: 20px; color: var(--ink-muted); }
 
@@ -132,9 +133,9 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
 
 /* print: A4, attached to emails as a PDF */
 @page {
-  size: A4; margin: 18mm 0 18mm; background: var(--cream-50);
-  @bottom-left { content: "Larkmoor Aesthetics · Advertising review · Sample"; margin-left: 20mm; font: 400 8pt/1 Poppins, sans-serif; color: var(--slate-600); }
-  @bottom-right { content: "Page " counter(page) " of " counter(pages); margin-right: 20mm; font: 400 8pt/1 Poppins, sans-serif; color: var(--slate-600); }
+  size: A4; margin: 18mm 0 18mm; background: var(--white);
+  @bottom-left { content: "Larkmoor Aesthetics · Advertising review · Sample"; margin-left: 20mm; font: 400 8pt/1 Figtree, sans-serif; color: var(--slate-600); }
+  @bottom-right { content: "Page " counter(page) " of " counter(pages); margin-right: 20mm; font: 400 8pt/1 Figtree, sans-serif; color: var(--slate-600); }
 }
 @page :first { @bottom-left { content: none; } }
 @media print {
@@ -162,7 +163,7 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
 <body>
 
 <div class="bar">
-  <a href="index.html"><img src="public/brand/logo-lockup-transparent.png" alt="John Pantelo" width="150" height="31" style="width:150px"></a>
+  <a href="index.html"><img src="public/brand/v2/JohnPantelo-logo_horizontal_navy-lavender.svg" alt="John Pantelo, Advertising Review" width="562" height="127" style="width:180px;height:auto"></a>
   <nav aria-label="Report">
     <a class="back" href="index.html">Back to site</a>
     <a class="back" href="sample-report.pdf">Download PDF</a>
@@ -174,7 +175,7 @@ figure { margin: var(--space-8) 0 0; display: grid; grid-template-columns: minma
   <p class="sample">This is a sample. Larkmoor Aesthetics, its website, Google listing and Instagram account are invented, and so is every quote. The problems in it are the ones I find most often on real UK clinic sites. A paid review looks the same, with live links and real screenshots.</p>
 
   <div class="head">
-    <img src="public/brand/logo-lockup-transparent.png" alt="John Pantelo" width="1646" height="342">
+    <img src="public/brand/v2/JohnPantelo-logo_horizontal_navy-lavender.svg" alt="John Pantelo, Advertising Review" width="562" height="127" style="width:180px;height:auto">
     <p>John Pantelopoulos<br>john@jpaudits.co.uk<br>18 August 2026</p>
   </div>
 
